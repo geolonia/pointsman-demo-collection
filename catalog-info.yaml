@@ -3,7 +3,7 @@ kind: Component
 metadata:
   namespace: geolonia
   name: pointsman-demo-collection
-  description: Demo of Pointsman with an NGSI-LD context broker (GeonicDB) for collection requests: booking, operations and crew apps around one broker.
+  description: 'Demo of Pointsman with an NGSI-LD context broker (GeonicDB) for collection requests: booking, operations and crew apps around one broker.'
   annotations:
     github.com/project-slug: geolonia/pointsman-demo-collection
     backstage.io/techdocs-ref: dir:.
