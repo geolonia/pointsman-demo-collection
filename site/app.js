@@ -25,7 +25,7 @@
       dayQ: 'Wished day', carryQ: 'I cannot carry the items out myself (age, illness or disability)', carryHint: '{city} carries bulky waste out of the home for people who cannot ({service}). A person arranges it.',
       noCarry: '{city} does not carry bulky waste out of the home: the items must be put out where agreed. Ask family or neighbours, or a private service.',
       noDays: 'No collection days in the next two weeks for this area.',
-      next: 'Next', back: 'Back', send: 'Send', change: 'Change the booking', cityPage: 'The city\u2019s page', again: 'Make another booking', sending: 'Sending…',
+      next: 'Next', back: 'Back', send: 'Send', change: 'Change the booking', retry: 'Try again', cityPage: 'The city\u2019s page', again: 'Make another booking', sending: 'Sending…',
       sendNote: 'This is a demo: nothing goes to the city, and the booking is deleted after a day. No name or phone number is asked for.',
       closed: 'Bookings are not taken yet. You can look at the items and fees.',
       e_busy: 'The demo is busy, or has had enough bookings for today. Try again later.', e_other: 'The booking could not be sent. Try again.', e_lost: 'The booking is no longer there (bookings are deleted after a day).',
@@ -69,7 +69,7 @@
       dayQ: '希望日', carryQ: '自分で品目を運び出せない（高齢・病気・障がい）', carryHint: '{city}には、運び出せない方のために家の中から運び出す制度（{service}）があります。職員が日時を調整します。',
       noCarry: '{city}は粗大ごみを家の中から運び出しません。決めた場所に出す必要があります。家族や近所の方、民間のサービスにご相談ください。',
       noDays: 'この地区には、2週間以内に収集日がありません。',
-      next: '次へ', back: '戻る', send: '送信', change: '申込を変える', cityPage: '市のページ', again: 'もう一度申し込む', sending: '送信しています…',
+      next: '次へ', back: '戻る', send: '送信', change: '申込を変える', retry: 'もう一度読み込む', cityPage: '市のページ', again: 'もう一度申し込む', sending: '送信しています…',
       sendNote: 'これはデモです。市には何も届かず、申込は1日で削除されます。名前や電話番号は聞きません。',
       closed: '申込はまだ受け付けていません。品目と手数料はご覧いただけます。',
       e_busy: 'デモが混み合っているか、今日の受付数に達しました。時間をおいてお試しください。', e_other: '申込を送れませんでした。もう一度お試しください。', e_lost: '申込はもうありません（申込は1日で削除されます）。',
@@ -185,6 +185,7 @@
       else {
         flow.place = { at: at, city: j.city, area: j.area, town: j.town };
         if (flow.catalogFor !== j.city) { flow.lines = []; loadCatalog(j.city); }
+        else if (flow.catalog === false) loadCatalog(j.city);
       }
       render();
     }).catch(function () {
@@ -276,7 +277,7 @@
     var c = city();
     var out = [];
     if (flow.catalog === null) return [el('p', { class: 'muted' }, [t('catalogLoading')]), actions(true)];
-    if (flow.catalog === false) return [el('p', { class: 'field-error' }, [t('catalogFailed')]), actions(true)];
+    if (flow.catalog === false) return [el('p', { class: 'field-error' }, [t('catalogFailed')]), btn(t('retry'), function () { loadCatalog(flow.place.city); render(); }, 'ghost'), actions(true)];
     var cats = ['furniture', 'bedding', 'appliance', 'bicycle', 'sports', 'other'];
     var filter = el('input', { type: 'search', value: flow.filter, 'aria-label': t('filter'), placeholder: t('filter'), oninput: function (e) { flow.filter = e.target.value; renderList(); } });
     var chips = el('div', { class: 'cats' }, [''].concat(cats).map(function (k) {
@@ -308,10 +309,12 @@
       ]);
     }));
     var fee = flow.lines.reduce(function (s, l) { return s + (l.item.collected && l.item.fee ? l.item.fee * l.qty : 0); }, 0);
+    // A collected item without a published fee: the sum is only part of the fee.
+    var feeOpen = flow.lines.some(function (l) { return l.item.collected && l.item.fee === null; });
     out.push(el('h3', {}, [t('yourItems')]), flow.lines.length ? lines : el('p', { class: 'muted' }, [t('none')]));
     if (flow.lines.length) {
       var kinds = flow.lines.length;
-      out.push(el('p', {}, [el('strong', {}, [t('total') + ': ' + yen(fee)]), ' · ', c.maxItemKinds ? t('kindsMax', { n: kinds, max: c.maxItemKinds }) : t('kinds', { n: kinds })]));
+      out.push(el('p', {}, [el('strong', {}, [t('total') + ': ' + yen(fee) + (feeOpen ? ' + ' + t('feeUnknown') : '')]), ' · ', c.maxItemKinds ? t('kindsMax', { n: kinds, max: c.maxItemKinds }) : t('kinds', { n: kinds })]));
       if (c.maxItemKinds && kinds > c.maxItemKinds) out.push(el('p', { class: 'note' }, [t('overMax')]));
     }
     out.push(actions(true, t('next'), function () { flow.step = 3; render(); }, flow.lines.length > 0));
@@ -387,16 +390,27 @@
       return r.json();
     }).then(function (j) {
       if (flow.id !== id) return;
+      flow.polls += 1;
       flow.result = j;
       // A linked booking: the city's catalogue, for the names and the advice.
       var code = j.entity && j.entity.municipality && j.entity.municipality.value;
       if (code && flow.catalogFor !== code) loadCatalog(code);
       showDev(j);
       render();
-      var done = j.lost || (j.entity && j.entity.intake && (j.entity.slot || j.entity.intake.value !== 'plan'));
+      var done = j.lost || (j.entity && j.entity.intake && (j.entity.slot || finalOf(j.entity.intake) !== 'plan'));
+      if (!done && flow.polls < MAX_POLLS) setTimeout(poll, flow.polls < 10 ? 1500 : 4000);
+    }).catch(function () {
+      if (flow.id !== id) return;
       flow.polls += 1;
-      if (!done && flow.polls < 40) setTimeout(poll, flow.polls < 10 ? 1500 : 4000);
-    }).catch(function () { flow.polls += 1; if (flow.polls < 40) setTimeout(poll, 4000); });
+      render();
+      if (flow.polls < MAX_POLLS) setTimeout(poll, 4000);
+    });
+  }
+
+  /** Polls before the page stops asking; then it offers to look again. */
+  var MAX_POLLS = 40;
+  function gaveUp() {
+    return flow.polls >= MAX_POLLS ? [el('p', {}, [t('gaveUp')]), btn(t('lookAgain'), function () { flow.polls = 0; render(); poll(); }, 'ghost')] : [];
   }
 
   function showDev(j) {
@@ -423,7 +437,7 @@
       try { history.replaceState(null, '', location.pathname); } catch (e) {}
       render();
     }, 'ghost')]);
-    if (!j) return [el('p', { class: 'muted' }, [el('span', { class: 'spinner' }), ' ', t('waiting')])];
+    if (!j) return [el('p', { class: 'muted' }, [el('span', { class: 'spinner' }), ' ', t(flow.polls > 15 ? 'slow' : 'waiting')])].concat(gaveUp());
     if (j.lost) return [el('p', {}, [t('e_lost')]), again];
     var e = j.entity;
     var out = [];
@@ -431,8 +445,7 @@
     out.push(el('h3', {}, [t('checkStep')]));
     if (!e.intake) {
       out.push(el('p', { class: 'muted' }, [el('span', { class: 'spinner' }), ' ', t(flow.polls > 15 ? 'slow' : 'waiting')]));
-      if (flow.polls >= 40) out.push(el('p', {}, [t('gaveUp')]), btn(t('lookAgain'), function () { flow.polls = 0; poll(); }, 'ghost'));
-      return out.concat([again]);
+      return out.concat(gaveUp(), [again]);
     }
     var ia = finalOf(e.intake);
     out.push(verdict('ia_', ia), el('p', { class: 'muted small' }, [t('why') + ': ' + ruleOf(e.intake, 'ri')]));
@@ -460,7 +473,7 @@
     // Step 2: the day.
     if (ia === 'plan') {
       out.push(el('h3', {}, [t('dayStep')]));
-      if (!e.slot) out.push(el('p', { class: 'muted' }, [el('span', { class: 'spinner' }), ' ', t('waitingDay')]));
+      if (!e.slot) out.push.apply(out, [el('p', { class: 'muted' }, [el('span', { class: 'spinner' }), ' ', t(flow.polls > 15 ? 'slow' : 'waitingDay')])].concat(gaveUp()));
       else {
         var sa = finalOf(e.slot);
         var costs = e.slotCosts && e.slotCosts.value;

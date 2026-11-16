@@ -173,13 +173,6 @@
       "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
     },
     {
-      "item_ja": "ピアノ",
-      "item_en": "Pianos (acoustic)",
-      "advice_en": null,
-      "note_en": "Not found on the city pages reviewed. The fee list includes organs and digital pianos (2,100 yen) but no acoustic piano.",
-      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
-    },
-    {
       "item_ja": "事業系ごみ",
       "item_en": "Business waste",
       "advice_en": "Contract a licensed collector or bring it to the plant yourself.",
@@ -260,5 +253,8 @@
     {"url": "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/not_burn.html", "title": "その他燃やさないごみ(指定ごみ袋でだすごみ） - 芦屋市", "retrieved": "2026-11-16"},
     {"url": "https://www.city.ashiya.lg.jp/kankyoushori/calendar/r8/tiku04.html", "title": "芦屋市／家庭ごみ収集カレンダー地区4（奥池町、奥池南町、東芦屋町、東山町、松ノ内町、船戸町）", "retrieved": "2026-11-16"},
     {"url": "https://www.city.ashiya.lg.jp/kankyoushori/kouikika/ashiya_kobe_gomikouikisyori_kyougisyo.html", "title": "芦屋市／神戸市との可燃ごみの広域処理に向けた協議書の締結", "retrieved": "2026-11-16"}
+  ],
+  "data_notes": [
+    {"date": "2026-11-16", "en": "Acoustic pianos are left out of not_accepted: no Ashiya page reviewed says the city does not collect them (the fee list has organs and digital pianos, 2,100 yen, but no acoustic piano). Check with the city before listing them."}
   ]
 }

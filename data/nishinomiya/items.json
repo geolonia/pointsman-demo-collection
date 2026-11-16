@@ -1935,15 +1935,6 @@
     "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
   },
   {
-    "name_ja": "脚立・はしご",
-    "name_en": "Stepladder / ladder",
-    "category": "other",
-    "fee_yen": 300,
-    "size_note": null,
-    "two_person": false,
-    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
-  },
-  {
     "name_ja": "ごみ箱（径・高さ40センチメートル以上）",
     "name_en": "Waste bin (40 cm or more across or high)",
     "category": "other",
@@ -2004,24 +1995,6 @@
     "fee_yen": 300,
     "size_note": null,
     "two_person": false,
-    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
-  },
-  {
-    "name_ja": "洋服・和タンス大（幅90センチメートル以上120センチメートル未満）1日1つまで",
-    "name_en": "Wardrobe, large (90 to under 120 cm wide; 1 per day)",
-    "category": "furniture",
-    "fee_yen": 900,
-    "size_note": "幅90センチメートル以上120センチメートル未満; 1日1つまで",
-    "two_person": true,
-    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
-  },
-  {
-    "name_ja": "洋服・和タンス超（幅120センチメートル以上）1日1つまで",
-    "name_en": "Wardrobe, extra large (120 cm wide or more; 1 per day)",
-    "category": "furniture",
-    "fee_yen": 1200,
-    "size_note": "幅120センチメートル以上; 1日1つまで",
-    "two_person": true,
     "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
   }
 ]

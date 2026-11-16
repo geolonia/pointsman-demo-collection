@@ -217,6 +217,15 @@ describe('POST /api/requests', () => {
     expect((await post('/api/requests', booking())).status).toBe(429);
   });
 
+  it('refuses a large body while reading it, with or without a length', async () => {
+    const big = JSON.stringify(booking({ pad: 'x'.repeat(20_000) }));
+    expect((await post('/api/requests', JSON.parse(big))).status).toBe(413);
+    // Streamed, so the Worker does not know the length before reading.
+    const stream = new ReadableStream({ start(c) { c.enqueue(new TextEncoder().encode(big)); c.close(); } });
+    const res = await demo.fetch(new Request(`${PAGE}/api/requests`, { method: 'POST', headers: { origin: PAGE }, body: stream, duplex: 'half' } as RequestInit), env, ctx);
+    expect(res.status).toBe(413);
+  });
+
   it('is limited per visitor', async () => {
     const keys: string[] = [];
     const limit = { limit: async ({ key }: { key: string }) => (keys.push(key), { success: false }) } as unknown as RateLimit;

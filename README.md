@@ -21,7 +21,7 @@ after a day. Book with your city for a real collection.
 
 The first step: the booking page, with route costs from a simple model.
 
-- Both cities' item lists with fees (Nishinomiya 225 items, Ashiya 224), and
+- Both cities' item lists with fees (Nishinomiya 222 items, Ashiya 224), and
   what each city does not collect as bulky waste, with where to take it
   instead. They are `CatalogItem` entities in GeonicDB, an NGSI-LD context
   broker ([data/](data/), [scripts/load-catalog.mjs](scripts/load-catalog.mjs)).
@@ -142,8 +142,9 @@ Both profiles must be published on `POINTSMAN_URL`. Secrets
 | `NOTIFY_SECRET` | Random; the subscriptions send it (`scripts/setup.mjs`) |
 | `POINTSMAN_TOKEN` | A Pointsman token limited to `bulky-waste-intake` and `bulky-waste-slot` |
 
-Without them the page still shows the cities and their items, and bookings
-are refused (503).
+`BROKER_API_KEY` is always needed: without it the page has its map but no
+items (502). Without `POINTSMAN_TOKEN` or `NOTIFY_SECRET` (or the queue), the
+page shows the cities and their items, and bookings are refused (503).
 
 Once, before the first deploy:
 

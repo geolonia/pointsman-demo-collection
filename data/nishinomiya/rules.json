@@ -363,5 +363,8 @@
     {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html", "title": "粗大ごみ処理券払い戻し施設｜西宮市ホームページ", "retrieved": "2026-11-16"},
     {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/sodaiuketukehennkou.html", "title": "「ごみ電話受付センター」・「電話受付センター」の開設日時が変更になります！！｜西宮市ホームページ", "retrieved": "2026-11-16"},
     {"url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/seibusougou.html", "title": "処理センターにおける小型充電式電池による発煙・発火について｜西宮市ホームページ", "retrieved": "2026-11-16"}
+  ],
+  "data_notes": [
+    {"date": "2026-11-16", "en": "Three items of the web fee table (ryokinhyo.html) are left out of items.json, because the 2026 booklet (sodaigomi6.pdf, the newer source) lists the same things with other size limits and fees: 脚立・はしご (booklet: はしご by length, 300 or 600 yen) and the two 洋服・和タンス sizes (booklet: タンス by width, 600, 900 or 1,200 yen)."}
   ]
 }

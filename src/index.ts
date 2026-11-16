@@ -118,12 +118,27 @@ async function catalog(env: Env, city: City, request: Request, ctx: ExecutionCon
  */
 const sameOrigin = (request: Request) => request.headers.get('origin') === new URL(request.url).origin;
 
-/** The body as text, at most `max` bytes. */
+/** The body as text, at most `max` bytes: refused by its length, or while it is read (never read in full first). */
 async function boundedText(request: Request, max: number): Promise<string | null> {
   const declared = Number(request.headers.get('content-length') ?? NaN);
   if (Number.isFinite(declared) && declared > max) return null;
-  const text = await request.text();
-  return new TextEncoder().encode(text).byteLength > max ? null : text;
+  if (!request.body) return '';
+  const reader = request.body.getReader();
+  const parts: Uint8Array[] = [];
+  let size = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    size += value.byteLength;
+    if (size > max) {
+      await reader.cancel();
+      return null;
+    }
+    parts.push(value);
+  }
+  const all = new Uint8Array(size);
+  parts.reduce((at, p) => (all.set(p, at), at + p.byteLength), 0);
+  return new TextDecoder().decode(all);
 }
 
 async function limited(env: Env, request: Request): Promise<Response | null> {
@@ -181,7 +196,12 @@ async function createRequest(env: Env, request: Request, ctx: ExecutionContext):
       return { item, qty: l.qty };
     });
     const broker = new Broker(env);
-    // All demo bookings of the last day (older ones are deleted): refused at the daily limit, and when the count is unknown.
+    // All demo bookings of the last day (older ones are deleted): refused at
+    // the daily limit, and when the count is unknown. A soft limit, as in the
+    // other demos: bookings sent at the same moment can pass it. It caps cost,
+    // not an exact number (the broker has no counter to reserve a place in;
+    // an exact one would need a Durable Object), and the rate limits keep
+    // bursts small.
     const current = await broker.count(REQUEST_TYPE);
     if (current === null || current >= dailyLimit(env)) return json({ error: 'the demo has had enough bookings for today, try again tomorrow' }, 429);
     const stop: Stop = { at: booking.location, serviceMin: tally(lines).twoPerson ? SERVICE_TWO_PERSON_MIN : SERVICE_MIN };
@@ -230,6 +250,9 @@ async function chooseDay(env: Env, id: string, request: Request): Promise<Respon
   if ((entity.confirmedDay as { value?: unknown } | undefined)?.value) return json({ error: 'a day is already chosen' }, 409);
   const offers = ((entity.slotCosts as { value?: Partial<Costs> } | undefined)?.value?.offers ?? []) as string[];
   if (typeof day !== 'string' || !offers.includes(day)) return json({ error: 'pick one of the offered days' }, 400);
+  // Not atomic: NGSI-LD has no conditional update, so two clicks at the same
+  // moment (two tabs) can both pass the check above, and the later one wins.
+  // Either way the day is one of the offered days, chosen by the resident.
   await broker.patch(id, { confirmedDay: { type: 'Property', value: day }, status: { type: 'Property', value: 'confirmed' } });
   return json({ id, day });
 }
