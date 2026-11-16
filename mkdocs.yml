@@ -1,0 +1,6 @@
+site_name: pointsman-demo-collection
+nav:
+  - Home: index.md
+docs_dir: docs
+theme:
+  name: material

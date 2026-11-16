@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  namespace: geolonia
+  name: pointsman-demo-collection
+  description: Demo of Pointsman with an NGSI-LD context broker (GeonicDB) for collection requests: booking, operations and crew apps around one broker.
+  annotations:
+    github.com/project-slug: geolonia/pointsman-demo-collection
+    backstage.io/techdocs-ref: dir:.
+  tags: ['website']
+spec:
+  type: 'website'
+  lifecycle: 'experimental'
+  owner: group:geolonia/geonicdb
+  system: system:geolonia/standards
+  # accessGrants:
+  #   - team: group:geolonia/team-name
+  #     permission: write  # read | triage | write | maintain | admin
