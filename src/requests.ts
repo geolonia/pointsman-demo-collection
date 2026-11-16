@@ -134,7 +134,7 @@ export function toRequestEntity(args: { uuid: string; booking: Booking; city: Ci
     ...(booking.wishedDay && { wishedDay: P(booking.wishedDay) }),
     slotCosts: P(costs),
     status: P('requested'),
-    // "lang" is a reserved NGSI-LD term: GeonicDB refuses it as an attribute name.
+    // GeonicDB refuses "lang" as an attribute name (it reserves it as a system term).
     language: P(booking.lang),
   };
 }

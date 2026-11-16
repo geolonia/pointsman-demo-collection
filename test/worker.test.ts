@@ -170,7 +170,7 @@ describe('POST /api/requests', () => {
     expect(costs.offers.length).toBe(3);
     expect(Object.keys(e)).not.toContain('address');
     expect(v('language')).toBe('ja');
-    // Names GeonicDB refuses as attributes (NGSI-LD reserved terms); "lang" once failed every live booking.
+    // Names GeonicDB refuses as attributes, from its own 400 message (cut short there, so not complete); "lang" once failed every live booking.
     const reserved = ['createdAt', 'modifiedAt', 'deletedAt', 'expiresAt', 'observedAt', 'lastUsedAt', 'datasetId', 'instanceId', 'unitCode', 'valueType', 'lang'];
     for (const name of reserved) expect(Object.keys(e), name).not.toContain(name);
     // Every input the profiles read is on the entity.
