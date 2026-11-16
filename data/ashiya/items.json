@@ -1,0 +1,2242 @@
+[
+  {
+    "name_ja": "あんま機（マッサージチェアー）",
+    "name_en": "Massage chair",
+    "category": "appliance",
+    "fee_yen": 1500,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "オーブン",
+    "name_en": "Oven",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "オーブントースター",
+    "name_en": "Toaster oven",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "吸入器",
+    "name_en": "Inhaler",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "クッキングカッター、ミキサー（ジューサーミキサー）",
+    "name_en": "Food processor / blender (juicer)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "コーヒーメーカー（高さ30センチ以上）",
+    "name_en": "Coffee maker (30 cm high or more)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "高さ30センチ以上",
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "魚焼器",
+    "name_en": "Fish grill",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "浄水器",
+    "name_en": "Water purifier",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "照明器具・大（高さ、幅または長さが100センチ以上）",
+    "name_en": "Light fitting, large (100 cm or more in height, width or length)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "高さ、幅または長さが100センチ以上",
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "照明器具・小（高さ、幅及び長さが100センチ未満）",
+    "name_en": "Light fitting, small (under 100 cm in height, width and length)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "高さ、幅及び長さが100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "食器洗浄機",
+    "name_en": "Dishwasher",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "食器乾燥機",
+    "name_en": "Dish dryer",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "炊飯器、電気もちつき機",
+    "name_en": "Rice cooker / rice-cake maker",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ズボンプレッサー",
+    "name_en": "Trouser press",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "掃除機",
+    "name_en": "Vacuum cleaner",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気あんか",
+    "name_en": "Electric foot warmer",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電子レンジ",
+    "name_en": "Microwave oven",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "パン焼機（ホームベーカリー）",
+    "name_en": "Bread maker",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "BSチューナー",
+    "name_en": "BS satellite tuner",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ビデオデッキ",
+    "name_en": "Video recorder",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "布団乾燥機",
+    "name_en": "Futon dryer",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ポット",
+    "name_en": "Electric pot",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ホットプレート",
+    "name_en": "Hot plate",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ミシン（卓上式）",
+    "name_en": "Sewing machine (tabletop)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ミシン（卓上式以外）",
+    "name_en": "Sewing machine (not tabletop)",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "湯沸かし器（家庭用）",
+    "name_en": "Water heater (household)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（1）家庭電化製品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ウィンドファン（冷却装置のないもの）",
+    "name_en": "Window fan (no cooling unit)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "オイルヒーター",
+    "name_en": "Oil heater",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "温風機（温風扇）、冷風機（冷風扇）",
+    "name_en": "Warm-air heater / air cooler",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "除湿機、加湿器、空気清浄器",
+    "name_en": "Dehumidifier / humidifier / air purifier",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ストーブ・大（高さ、幅または長さが60センチ以上）",
+    "name_en": "Heater, large (60 cm or more)",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": "高さ、幅または長さが60センチ以上",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ストーブ・中（高さ、幅または長さが40センチ以上60センチ未満）",
+    "name_en": "Heater, medium (40 to under 60 cm)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "高さ、幅または長さが40センチ以上60センチ未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ストーブ・小（高さ、幅または長さが40センチ未満）",
+    "name_en": "Heater, small (under 40 cm)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "高さ、幅または長さが40センチ未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "扇風機、換気扇",
+    "name_en": "Electric fan / extractor fan",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気カーペット・大（8畳以上）",
+    "name_en": "Electric carpet, large (8 tatami mats or more)",
+    "category": "appliance",
+    "fee_yen": 1200,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気カーペット・中（3畳以上8畳未満）",
+    "name_en": "Electric carpet, medium (3 to under 8 tatami mats)",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": "3畳以上8畳未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気カーペット・小（3畳未満）",
+    "name_en": "Electric carpet, small (under 3 tatami mats)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "3畳未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気こたつ・大（幅または長さが120センチ以上）",
+    "name_en": "Kotatsu heated table, large (120 cm or more)",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": "幅または長さが120センチ以上",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気こたつ・中（幅または長さが80センチ以上120センチ未満）",
+    "name_en": "Kotatsu heated table, medium (80 to under 120 cm)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "幅または長さが80センチ以上120センチ未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気こたつ・小（幅及び長さが80センチ未満）",
+    "name_en": "Kotatsu heated table, small (under 80 cm)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "幅及び長さが80センチ未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電気こたつ天板",
+    "name_en": "Kotatsu table top",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ファンヒーター・大（高さ、幅または長さが60センチ以上）",
+    "name_en": "Fan heater, large (60 cm or more)",
+    "category": "appliance",
+    "fee_yen": 1200,
+    "size_note": "高さ、幅または長さが60センチ以上",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ファンヒーター・中（高さ、幅または長さが40センチ以上60センチ未満）",
+    "name_en": "Fan heater, medium (40 to under 60 cm)",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": "高さ、幅または長さが40センチ以上60センチ未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ファンヒーター・小（高さ、幅及び長さが40センチ未満）",
+    "name_en": "Fan heater, small (under 40 cm)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "高さ、幅及び長さが40センチ未満",
+    "two_person": false,
+    "fee_list_section": "（2）冷暖房機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "コピー機・大（高さ50センチ以上）",
+    "name_en": "Copier, large (50 cm high or more)",
+    "category": "appliance",
+    "fee_yen": 2400,
+    "size_note": "高さ50センチ以上",
+    "two_person": true,
+    "fee_list_section": "（3）OA機器・事務機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "コピー機・中（高さ20センチ以上50センチ未満）",
+    "name_en": "Copier, medium (20 to under 50 cm high)",
+    "category": "appliance",
+    "fee_yen": 1200,
+    "size_note": "高さ20センチ以上50センチ未満",
+    "two_person": false,
+    "fee_list_section": "（3）OA機器・事務機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "コピー機・小（高さ20センチ未満）",
+    "name_en": "Copier, small (under 20 cm high)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "高さ20センチ未満",
+    "two_person": false,
+    "fee_list_section": "（3）OA機器・事務機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "シュレッダー（家庭用）",
+    "name_en": "Shredder (household)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（3）OA機器・事務機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "プリンター、スキャナー、ファクシミリ",
+    "name_en": "Printer / scanner / fax machine",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（3）OA機器・事務機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ワードプロセッサー",
+    "name_en": "Word processor",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（3）OA機器・事務機器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "アンプ",
+    "name_en": "Amplifier",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "エレクトーン",
+    "name_en": "Electone (electronic organ)",
+    "category": "appliance",
+    "fee_yen": 2100,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "オルガン（電子オルガンを含む）、電子ピアノ",
+    "name_en": "Organ (incl. electronic organ) / digital piano",
+    "category": "appliance",
+    "fee_yen": 2100,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "カセットデッキ、ラジカセ",
+    "name_en": "Cassette deck / radio cassette player",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "カラオケセット、カラオケプレーヤー",
+    "name_en": "Karaoke set / karaoke player",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "キーボード、ギター（アコースティックまたはエレキ）",
+    "name_en": "Keyboard / guitar (acoustic or electric)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "CDプレーヤー、レコードプレーヤー",
+    "name_en": "CD player / record player",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ステレオ（旧一体式（スピーカーは2本まで））",
+    "name_en": "Stereo (old all-in-one type, up to 2 speakers)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "スピーカーは2本まで",
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ステレオ（コンポ）・大（高さ、幅または長さが50センチ以上（スピーカーは2本まで））",
+    "name_en": "Stereo system, large (50 cm or more, up to 2 speakers)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "スピーカーは2本まで",
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ステレオ（コンポ）・小（高さ、幅及び長さが50センチ未満 （スピーカーは2本まで））",
+    "name_en": "Stereo system, small (under 50 cm, up to 2 speakers)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "スピーカーは2本まで",
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "スピーカー・大（高さまたは幅が50センチ以上（2本まで））",
+    "name_en": "Speaker, large (50 cm or more high or wide, up to 2)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "2本まで",
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "スピーカー・小（高さ及び幅が50センチ未満（2本まで））",
+    "name_en": "Speaker, small (under 50 cm, up to 2)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "2本まで",
+    "two_person": false,
+    "fee_list_section": "（4）音響機器、楽器類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "衣装ケース・大（長持を含む）",
+    "name_en": "Clothes storage case, large (incl. long chest)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "衣装ケース・小",
+    "name_en": "Clothes storage case, small",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "いす、回転いす、パイプいす、藤いす、座いす",
+    "name_en": "Chair / swivel chair / folding chair / rattan chair / floor chair",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "応接いす（2人掛け以上）、ソファー（2人掛け以上）",
+    "name_en": "Armchair or sofa (2 seats or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "2人掛け以上",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "応接いす（1人掛け）、ソファー（1人掛け）",
+    "name_en": "Armchair or sofa (1 seat)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "1人掛け",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "応接テーブル（応接机）・大（幅または長さが80センチ以上）",
+    "name_en": "Coffee table, large (80 cm or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅または長さが80センチ以上",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "応接テーブル（応接机）・小（幅及び長さが80センチ未満）",
+    "name_en": "Coffee table, small (under 80 cm)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "幅及び長さが80センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "オーディオボード、オーディオラック、ステレオラック",
+    "name_en": "Audio cabinet / audio rack / stereo rack",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "押入ケース、押入だんす",
+    "name_en": "Closet storage case / closet chest",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "掛時計",
+    "name_en": "Wall clock",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "傘立て、スリッパラック、おもちゃラック",
+    "name_en": "Umbrella stand / slipper rack / toy rack",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "飾り棚",
+    "name_en": "Display cabinet",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "カラーボックス",
+    "name_en": "Cube storage box",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "キャビネット",
+    "name_en": "Cabinet",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "鏡台（ドレッサー）、姿見",
+    "name_en": "Dressing table (dresser) / full-length mirror",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "下駄箱・大（高さまたは幅が90センチ以上）",
+    "name_en": "Shoe cabinet, large (90 cm or more high or wide)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さまたは幅が90センチ以上",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "下駄箱・小（高さ及び幅が90センチ未満）",
+    "name_en": "Shoe cabinet, small (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "高さ及び幅が90センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "コーナーボード、ローチェスト",
+    "name_en": "Corner cabinet / low chest",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "サイドボード",
+    "name_en": "Sideboard",
+    "category": "furniture",
+    "fee_yen": 1800,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "座敷机・大（幅180センチ以上）",
+    "name_en": "Low table, large (180 cm wide or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "幅180センチ以上",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "座敷机・中（幅150センチ以上180センチ未満）",
+    "name_en": "Low table, medium (150 to under 180 cm wide)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "幅150センチ以上180センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "座敷机・小（幅150センチ未満）",
+    "name_en": "Low table, small (under 150 cm wide)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅150センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "食卓テーブル",
+    "name_en": "Dining table",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "書棚（本箱）・大（高さまたは幅が150センチ以上）",
+    "name_en": "Bookcase, large (150 cm or more high or wide)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さまたは幅が150センチ以上",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "書棚（本箱）・中（高さまたは幅が90センチ以上150センチ未満）",
+    "name_en": "Bookcase, medium (90 to under 150 cm)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "高さまたは幅が90センチ以上150センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "書棚（本箱）・小（高さ及び幅が90センチ未満）",
+    "name_en": "Bookcase, small (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "高さ及び幅が90センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "食器棚、キッチンストッカー・大（高さまたは幅が150センチ以上）",
+    "name_en": "Cupboard / kitchen storage, large (150 cm or more high or wide)",
+    "category": "furniture",
+    "fee_yen": 1800,
+    "size_note": "高さまたは幅が150センチ以上",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "食器棚、キッチンストッカー・中（高さまたは幅が90センチ以上150センチ未満）",
+    "name_en": "Cupboard / kitchen storage, medium (90 to under 150 cm)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "高さまたは幅が90センチ以上150センチ未満",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "食器棚、キッチンストッカー・小（高さ及び幅が90センチ未満）",
+    "name_en": "Cupboard / kitchen storage, small (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さ及び幅が90センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "製図机",
+    "name_en": "Drafting desk",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "整理だんす・大（高さまたは幅が150センチ以上）",
+    "name_en": "Chest of drawers, large (150 cm or more high or wide)",
+    "category": "furniture",
+    "fee_yen": 1800,
+    "size_note": "高さまたは幅が150センチ以上",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "整理だんす・中（高さまたは幅が90センチ以上150センチ未満）",
+    "name_en": "Chest of drawers, medium (90 to under 150 cm)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "高さまたは幅が90センチ以上150センチ未満",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "整理だんす・小（高さ及び幅が90センチ未満）",
+    "name_en": "Chest of drawers, small (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さ及び幅が90センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "机（両袖机、ライティングデスクを含む）",
+    "name_en": "Desk (double-pedestal desk, incl. writing desk)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "机（片袖机を含む）",
+    "name_en": "Desk (incl. single-pedestal desk)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "テレビ台・大（幅60センチ以上）",
+    "name_en": "TV stand, large (60 cm wide or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅60センチ以上",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "テレビ台・小（幅60センチ未満）",
+    "name_en": "TV stand, small (under 60 cm wide)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "幅60センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電話台、花台、ファクシミリ台",
+    "name_en": "Telephone stand / flower stand / fax stand",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "籐製家具・大（高さまたは幅が100センチ以上）",
+    "name_en": "Rattan furniture, large (100 cm or more high or wide)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "高さまたは幅が100センチ以上",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "籐製家具・小（高さ及び幅が100センチ未満）、籐製収納ボックス",
+    "name_en": "Rattan furniture, small (under 100 cm) / rattan storage box",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "高さ及び幅が100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "パイプハンガー、ファンシーケース",
+    "name_en": "Clothes rail / fabric wardrobe",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "パソコンラック",
+    "name_en": "Computer desk rack",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ハンガーラック",
+    "name_en": "Hanger rack",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "文机",
+    "name_en": "Low writing desk (fuzukue)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベビーチェアー（ハイアンドローを含む。）、ベビーラック（コンビラックを含む）",
+    "name_en": "Baby chair (incl. high-low chair) / baby rocker",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベビーだんす",
+    "name_en": "Baby's chest of drawers",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "洋服だんす・特大（高さ150センチ以上で幅100センチ以上）",
+    "name_en": "Wardrobe, extra large (150 cm or more high and 100 cm or more wide)",
+    "category": "furniture",
+    "fee_yen": 2100,
+    "size_note": "高さ150センチ以上で幅100センチ以上",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "洋服だんす・大（高さ150センチ以上で幅100センチ未満）",
+    "name_en": "Wardrobe, large (150 cm or more high, under 100 cm wide)",
+    "category": "furniture",
+    "fee_yen": 1800,
+    "size_note": "高さ150センチ以上で幅100センチ未満",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "洋服だんす・中（高さまたは幅が90センチ以上150センチ未満）",
+    "name_en": "Wardrobe, medium (90 to under 150 cm)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "高さまたは幅が90センチ以上150センチ未満",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "洋服だんす・小（高さ及び幅が90センチ未満）",
+    "name_en": "Wardrobe, small (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さ及び幅が90センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "和だんす・大（高さまたは幅が150センチ以上）",
+    "name_en": "Japanese chest (tansu), large (150 cm or more high or wide)",
+    "category": "furniture",
+    "fee_yen": 1800,
+    "size_note": "高さまたは幅が150センチ以上",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "和だんす・中（高さまたは幅が90センチ以上150センチ未満）",
+    "name_en": "Japanese chest (tansu), medium (90 to under 150 cm)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "高さまたは幅が90センチ以上150センチ未満",
+    "two_person": true,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "和だんす・小（高さ及び幅が90センチ未満）",
+    "name_en": "Japanese chest (tansu), small (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さ及び幅が90センチ未満",
+    "two_person": false,
+    "fee_list_section": "（5）家具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "アコーディオンカーテン",
+    "name_en": "Accordion curtain (folding door)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "雨戸、網戸",
+    "name_en": "Storm shutter / window screen",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ウッドカーペット・大（8畳以上）",
+    "name_en": "Wood-panel carpet, large (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ウッドカーペット・中（3畳以上8畳未満）",
+    "name_en": "Wood-panel carpet, medium (3 to under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "3畳以上8畳未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ウッドカーペット・小（3畳未満）",
+    "name_en": "Wood-panel carpet, small (under 3 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "3畳未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "カーテンレール",
+    "name_en": "Curtain rail",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "敷物・大（8畳以上）",
+    "name_en": "Rug, large (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "敷物・中（3畳以上8畳未満）",
+    "name_en": "Rug, medium (3 to under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "3畳以上8畳未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "敷物・小（3畳未満）",
+    "name_en": "Rug, small (under 3 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "3畳未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "人工芝・特大（長さ9メートル以上）",
+    "name_en": "Artificial turf, extra large (9 m long or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "長さ9メートル以上",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "人工芝・大（長さ9メートル未満）",
+    "name_en": "Artificial turf, large (under 9 m long)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "長さ9メートル未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "人工芝・中（60センチ角以上）",
+    "name_en": "Artificial turf, medium (60 cm square or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "60センチ角以上",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "人工芝・小（60センチ角未満）",
+    "name_en": "Artificial turf, small (under 60 cm square)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "60センチ角未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "すだれ（2本まで）",
+    "name_en": "Bamboo blind (up to 2)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "2本まで",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "すのこ",
+    "name_en": "Slatted duckboard",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "洗面化粧台",
+    "name_en": "Washbasin vanity unit",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "籐の敷物・大（8畳以上）",
+    "name_en": "Rattan rug, large (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "籐の敷物・中（3畳以上8畳未満）",
+    "name_en": "Rattan rug, medium (3 to under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "3畳以上8畳未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "籐の敷物・小（3畳未満）",
+    "name_en": "Rattan rug, small (under 3 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "3畳未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "びょうぶ、ついたて・大（高さまたは幅が100センチ以上）",
+    "name_en": "Folding screen / partition, large (100 cm or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "高さまたは幅が100センチ以上",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "びょうぶ、ついたて・小（高さ及び幅が100センチ未満）",
+    "name_en": "Folding screen / partition, small (under 100 cm)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "高さ及び幅が100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ブラインド、ロールカーテン",
+    "name_en": "Window blind / roller blind",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "よしず",
+    "name_en": "Reed screen",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（6）建具・敷物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "簡易ベッド・大",
+    "name_en": "Folding bed, large",
+    "category": "bedding",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "簡易ベッド・小、ボンボンベッド",
+    "name_en": "Folding bed, small / cot bed",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "座布団（5枚まで）",
+    "name_en": "Floor cushions (up to 5)",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": "5枚まで",
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "敷布団用マットレス",
+    "name_en": "Futon mattress pad",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "電動式ベッド（マットレスを除く）",
+    "name_en": "Electric bed (without mattress)",
+    "category": "bedding",
+    "fee_yen": 2400,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "布団、毛布（3枚まで、混合可）",
+    "name_en": "Futon / blanket (up to 3, can be mixed)",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": "3枚まで、混合可",
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベッド・大（セミダブル以上）",
+    "name_en": "Bed, large (semi-double or larger)",
+    "category": "bedding",
+    "fee_yen": 1800,
+    "size_note": "セミダブル以上",
+    "two_person": true,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベッド・大（セミダブル以上で解体済みのもの）、二段ベッド",
+    "name_en": "Bed, large (semi-double or larger, taken apart) / bunk bed",
+    "category": "bedding",
+    "fee_yen": 1500,
+    "size_note": "セミダブル以上で解体済みのもの",
+    "two_person": true,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベッド・小（シングル）、ソファーベッド",
+    "name_en": "Bed, small (single) / sofa bed",
+    "category": "bedding",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベッド・小（シングルで解体済みのもの）",
+    "name_en": "Bed, small (single, taken apart)",
+    "category": "bedding",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベッドマットレス・大（セミダブル以上）",
+    "name_en": "Bed mattress, large (semi-double or larger)",
+    "category": "bedding",
+    "fee_yen": 900,
+    "size_note": "セミダブル以上",
+    "two_person": true,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベッドマットレス・小（シングル）",
+    "name_en": "Bed mattress, small (single)",
+    "category": "bedding",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベビーベッド",
+    "name_en": "Baby bed",
+    "category": "bedding",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（7）寝具類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "キャリーケース、台車",
+    "name_en": "Wheeled suitcase / hand truck",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "車いす",
+    "name_en": "Wheelchair",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "車いす（電動式）",
+    "name_en": "Wheelchair (electric)",
+    "category": "other",
+    "fee_yen": 2100,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "三輪自転車（大人用）",
+    "name_en": "Adult tricycle",
+    "category": "bicycle",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "三輪車、一輪車、乗用おもちゃ",
+    "name_en": "Children's tricycle / unicycle / ride-on toy",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "自転車（電動式）",
+    "name_en": "Bicycle (electric)",
+    "category": "bicycle",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "自転車・大（17インチ以上）",
+    "name_en": "Bicycle, large (17 inch or more)",
+    "category": "bicycle",
+    "fee_yen": 600,
+    "size_note": "17インチ以上",
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "自転車・小（幼児用、折りたたみ式、16インチ以下）",
+    "name_en": "Bicycle, small (child, folding, 16 inch or less)",
+    "category": "bicycle",
+    "fee_yen": 300,
+    "size_note": "幼児用、折りたたみ式、16インチ以下",
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベビーカー、手押し車、買い物車（ショッピングカート）",
+    "name_en": "Baby stroller / push cart / shopping trolley",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（8）乗物類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ガスオーブン、ガスレンジ",
+    "name_en": "Gas oven / gas range",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ガスコンロ・ガステーブルコンロ（2口以上）",
+    "name_en": "Gas cooker / gas table cooker (2 burners or more)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "2口以上",
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ガス台、レンジ台・大（高さまたは幅が150センチ以上）",
+    "name_en": "Cooker stand / microwave stand, large (150 cm or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "高さまたは幅が150センチ以上",
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ガス台、レンジ台・中（高さまたは幅が100センチ以上150センチ未満）",
+    "name_en": "Cooker stand / microwave stand, medium (100 to under 150 cm)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "高さまたは幅が100センチ以上150センチ未満",
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ガス台、レンジ台・小（高さ及び幅が100センチ未満）",
+    "name_en": "Cooker stand / microwave stand, small (under 100 cm)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "高さ及び幅が100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "キッチンカウンター",
+    "name_en": "Kitchen counter",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ごみペール",
+    "name_en": "Waste bin (pail)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "米びつ",
+    "name_en": "Rice bin",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "米びつ付収納庫・大（高さまたは幅が100センチ以上）",
+    "name_en": "Storage unit with rice bin, large (100 cm or more)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "高さまたは幅が100センチ以上",
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "米びつ付収納庫・小（高さ及び幅が100センチ未満）",
+    "name_en": "Storage unit with rice bin, small (under 100 cm)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "高さ及び幅が100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "中華なべ",
+    "name_en": "Wok",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "調理台、流し台、レンジラック",
+    "name_en": "Kitchen worktop / sink unit / microwave rack",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "レンジフード",
+    "name_en": "Cooker hood",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ワゴン",
+    "name_en": "Trolley (wagon)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（9）台所用品類",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "アイロン台",
+    "name_en": "Ironing board",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "編み機",
+    "name_en": "Knitting machine",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "アンテナ（パラボナアンテナを含む）",
+    "name_en": "Antenna (incl. satellite dish)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "衣類乾燥機の台",
+    "name_en": "Stand for clothes dryer",
+    "category": "other",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "植木棚",
+    "name_en": "Plant shelf",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "植木鉢、火鉢",
+    "name_en": "Plant pot / brazier (hibachi)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ウォシュレット（便座を含む）、ポータブルトイレ",
+    "name_en": "Bidet toilet seat (incl. seat) / portable toilet",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "エアロバイク（サイクリングマシーン）",
+    "name_en": "Exercise bike",
+    "category": "sports",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "脚立",
+    "name_en": "Stepladder",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "金庫（手提げタイプ・耐火式以外）",
+    "name_en": "Safe (portable, not fireproof)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "草刈機（電動式またはエンジン付き）、芝刈機",
+    "name_en": "Grass trimmer (electric or engine) / lawn mower",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "クーラーボックス",
+    "name_en": "Cool box",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "車のキャリー（2本まで）",
+    "name_en": "Car roof carrier (up to 2)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "2本まで",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ゲーム機",
+    "name_en": "Game console",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "健康器具（ステッパー・金魚運動器具）",
+    "name_en": "Fitness equipment (stepper, swing exerciser)",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "剣道具一式",
+    "name_en": "Kendo equipment set",
+    "category": "sports",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "碁盤・将棋盤・大（厚さ20センチ以上）",
+    "name_en": "Go or shogi board, large (20 cm thick or more)",
+    "category": "other",
+    "fee_yen": 900,
+    "size_note": "厚さ20センチ以上",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "碁盤・将棋盤・中（厚さ10センチ以上20センチ未満）",
+    "name_en": "Go or shogi board, medium (10 to under 20 cm thick)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "厚さ10センチ以上20センチ未満",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "碁盤・将棋盤・小（厚さ10センチ未満）",
+    "name_en": "Go or shogi board, small (under 10 cm thick)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "厚さ10センチ未満",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ゴルフクラブ（10本まで）、ゴルフバック",
+    "name_en": "Golf clubs (up to 10) / golf bag",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": "10本まで",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ゴルフセット（ゴルフ用品一式）",
+    "name_en": "Golf set (full golf equipment)",
+    "category": "sports",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "サーフボード",
+    "name_en": "Surfboard",
+    "category": "sports",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "水槽・大（高さ、幅または長さが100センチ以上）",
+    "name_en": "Fish tank, large (100 cm or more)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "高さ、幅または長さが100センチ以上",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "水槽・小（高さ、幅及び長さが100センチ未満）",
+    "name_en": "Fish tank, small (under 100 cm)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "高さ、幅及び長さが100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "スキー板（ストック付き）、スノーボード",
+    "name_en": "Skis (with poles) / snowboard",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "スコップ、高枝バサミ",
+    "name_en": "Shovel / long-reach pruning shears",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "スーツケース（旅行用トランク）",
+    "name_en": "Suitcase (travel trunk)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "すべり台",
+    "name_en": "Slide",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "体重計（ヘルスメーター）",
+    "name_en": "Bathroom scale",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "卓球台",
+    "name_en": "Table tennis table",
+    "category": "sports",
+    "fee_yen": 2100,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "チャイルドシート",
+    "name_en": "Child car seat",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "テニスラケット",
+    "name_en": "Tennis racket",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "鳥かご",
+    "name_en": "Bird cage",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "バーベキューコンロ",
+    "name_en": "Barbecue grill",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "バーベキューテーブルセット",
+    "name_en": "Barbecue table set",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "8ミリ映写機",
+    "name_en": "8 mm film projector",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ビーチパラソル",
+    "name_en": "Beach umbrella",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ぶら下がり健康機、エアーウォーカー",
+    "name_en": "Pull-up stand / air walker",
+    "category": "sports",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "フラワースタンド",
+    "name_en": "Flower stand",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ぶらんこ",
+    "name_en": "Swing",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "風呂のふた",
+    "name_en": "Bathtub cover",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ペット小屋・大（高さ、幅または長さが100センチ以上）",
+    "name_en": "Pet house, large (100 cm or more)",
+    "category": "other",
+    "fee_yen": 900,
+    "size_note": "高さ、幅または長さが100センチ以上",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ペット小屋・中（高さ、幅または長さが50センチ以上100センチ未満）",
+    "name_en": "Pet house, medium (50 to under 100 cm)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "高さ、幅または長さが50センチ以上100センチ未満",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ペット小屋・小（高さ、幅及び長さが50センチ未満）",
+    "name_en": "Pet house, small (under 50 cm)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "高さ、幅及び長さが50センチ未満",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ベビーバス、ベビーバスケット",
+    "name_en": "Baby bath / baby basket",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "歩行補助具",
+    "name_en": "Walking aid",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "物置・大（1畳以上3畳未満で解体済みのもの）",
+    "name_en": "Storage shed, large (1 to under 3 tatami mats, taken apart)",
+    "category": "other",
+    "fee_yen": 900,
+    "size_note": "1畳以上3畳未満で解体済みのもの",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "物置・小（1畳未満で解体済みのもの）",
+    "name_en": "Storage shed, small (under 1 tatami mat, taken apart)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "1畳未満で解体済みのもの",
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "物干竿、物干台",
+    "name_en": "Laundry pole / laundry pole stand",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  },
+  {
+    "name_ja": "ランニングマシン（ルームランナー）",
+    "name_en": "Treadmill",
+    "category": "sports",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "fee_list_section": "（10）趣味用品・その他",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+  }
+]

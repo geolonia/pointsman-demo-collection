@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../engine/schema/profile-v1.schema.json
+# Collection demo (geolonia/pointsman-demo-collection): can a bulky waste
+# booking (粗大ごみ) go to scheduling? The bridge sends a ServiceRequest
+# entity in normalized NGSI-LD form. The Worker has already looked up every
+# item in the city's catalogue (CatalogItem entities), so the request carries
+# counts, not free text. Rules only, no model: the same booking always gives
+# the same action.
+#
+# A draft kept next to the demo. The published copy lives in the private
+# deployment config (pointsman-config); change both together.
+id: bulky-waste-intake
+version: 1
+title:
+  en: Bulky waste booking intake
+  ja: 粗大ごみ申込の受付確認
+description:
+  en: Check a bulky waste booking before a collection day is chosen, and send items the city does not collect elsewhere.
+  ja: 粗大ごみの申込を収集日を決める前に確認し、市が収集しない品目を案内する。
+model: none
+questions: []
+facts:
+  # From the request, exactly as sent (src/requests.ts).
+  # Kinds of item, and the city's limit (left out when the city has none).
+  - { name: kinds, type: field_number, at: $.itemKinds.value }
+  - { name: max_kinds, type: field_number, at: $.maxItemKinds.value }
+  - { name: not_collected, type: field_number, at: $.notCollectedCount.value }
+  - { name: carry_out, type: field_flag, at: $.carryOut.value }
+policy:
+  rules:
+    # A broken request: a person looks at it.
+    - when: "facts.kinds.missing == true or facts.not_collected.missing == true or facts.carry_out.missing == true"
+      action: review
+    # Items the city does not collect as bulky waste (home appliance
+    # recycling, PCs, and so on): the resident is told where to take them.
+    - when: "facts.not_collected.value > 0"
+      action: redirect
+    # Nothing to collect.
+    - when: "facts.kinds.value < 1"
+      action: ask
+    # More kinds of item than one booking may have: the resident splits the
+    # booking. Without a limit (the fact is missing) this never matches.
+    - when: "facts.kinds.value > facts.max_kinds.value"
+      action: ask
+    # Carrying items out of the home (ふれあい収集) needs a crew and a set
+    # time: a person arranges it.
+    - when: "facts.carry_out.value == true"
+      action: review
+  default: plan
+  people_check: [review]
+  people_answers: [plan, redirect, ask, reject]

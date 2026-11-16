@@ -1,0 +1,11 @@
+# Headers for the page and its files (Workers static assets). The CSP allows
+# what the page loads: its own files and API, MapLibre from unpkg (the exact
+# version, as in index.html), Google Fonts, GSI's map tiles, and GSI's address
+# search (the words typed into the search go to GSI). MapLibre runs its
+# worker from a blob:. test/worker.test.ts ("the page") checks that
+# index.html and app.js fit this.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://unpkg.com/maplibre-gl@5.24.0/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com/maplibre-gl@5.24.0/; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://cyberjapandata.gsi.go.jp; connect-src 'self' https://cyberjapandata.gsi.go.jp https://msearch.gsi.go.jp; worker-src blob:; child-src blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin

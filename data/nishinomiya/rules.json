@@ -1,0 +1,367 @@
+{
+  "city": {
+    "name_ja": "西宮市",
+    "name_en": "Nishinomiya City",
+    "prefecture_ja": "兵庫県",
+    "prefecture_en": "Hyogo Prefecture"
+  },
+  "municipality_code": "282049",
+  "municipality_code_note": "全国地方公共団体コード (5-digit 28204 plus check digit 9). The city's own online application portal uses 282049 in its URL (https://lgpos.task-asp.net/cu/282049/...), linked from the にこやか収集 page.",
+  "fee_model": {
+    "type": "per_item",
+    "summary_en": "Paid, per item. Each item has a fixed fee from 300 to 3,600 yen. You pay with 300-yen bulky waste stickers (粗大ごみ処理券), or by credit card / PayPay when you book through LINE.",
+    "ticket": {
+      "name_ja": "西宮市粗大ごみ処理券（シール）",
+      "unit_price_yen": 300,
+      "unit_note": "Fees are multiples of 300 yen; the fee table shows the number of stickers per item (シール 1枚 = 300円).",
+      "where_to_buy_ja": "【西宮市粗大ごみ処理券取扱店】のステッカーを掲示しているコンビニ・スーパーマーケット、米穀店、酒店、各支所など",
+      "where_to_buy_en": "Convenience stores, supermarkets, rice shops, liquor shops and branch offices showing the official sticker-seller sign.",
+      "how_to_use_en": "Write the booking number on each sticker and stick it where it can be seen on each item.",
+      "store_list_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/sodaigomi_tenpo.html",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/sodaigomi_jusho.html"
+      ],
+      "refund_en": "Unused stickers can be refunded at the offices listed on the city's refund page (branch offices incl. 塩瀬支所 and 山口支所, 美化企画課, アクタ西宮ステーション, 美化第1課 and others).",
+      "refund_source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+    },
+    "cashless": {
+      "available": true,
+      "channel": "LINE only",
+      "methods": ["credit card (JCB, VISA, Mastercard, AMEX, Diners)", "PayPay"],
+      "since": "2025-10-22",
+      "how_to_mark_item_en": "Write the application number (申請番号) on an A4-size sheet with a marker and tape it firmly to each item. Items without the sheet are not collected.",
+      "cancellation_en": "Cancel in LINE up to 3 days before; after that call 0798-33-6776. No refund for same-day cancellation or if the item was not put out when the crew came. Paid bookings cannot be changed; cancel and book again.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+    },
+    "fee_range_yen": [300, 3600],
+    "fee_list_urls": [
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+    ],
+    "fee_list_note_en": "Items not in the list, or of a different size, may cost a different amount; ask the phone booking centre (0798-33-6776). The household collection fees (300 to 3,600 yen) were NOT changed in the April 2026 fee revision; only self-haul fees changed.",
+    "fee_list_note_sources": [
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/oshirase/shoritesuuryou.html"
+    ]
+  },
+  "booking": {
+    "required": true,
+    "same_day_collection": false,
+    "channels": [
+      {
+        "type": "phone",
+        "name_ja": "ごみ電話受付センター",
+        "phone": "0798-33-6776",
+        "hours_ja": "月曜から金曜日（祝日も含む）午前9時から17時30分",
+        "hours_en": "Monday to Friday, including public holidays, 9:00 to 17:30. Closed Saturday and Sunday.",
+        "note_en": "First come, first served. Same-day collection is not available.",
+        "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+      },
+      {
+        "type": "line",
+        "account_id": "@miyakko",
+        "account_name_ja": "西宮市公式LINEアカウント（みやたん）",
+        "hours_en": "24 hours",
+        "limit_en": "Up to 5 item types per application; some large items are limited to 1 or 2.",
+        "how_en": "Add @miyakko as a friend, open the menu 'ごみ' then '粗大ごみの申込', agree to 4 terms, choose items and the date, then choose to pay with stickers or cashless. First-time LINE users get a provisional booking until the centre confirms it.",
+        "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+      },
+      {
+        "type": "web",
+        "available": false,
+        "note_en": "No web form for bulky waste collection was found on the city site; booking is by phone or LINE."
+      }
+    ],
+    "lead_time": {
+      "published_en": "Because of many applications, collection is currently about 2 to 3 weeks after booking.",
+      "published_ja": "現在、申し込みが殺到しておりますので、約2から3週間先の収集になります。",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+    },
+    "max_per_booking": {
+      "published_en": "About the amount of 2 study desks per booking; some items have their own limits. LINE: up to 5 item types per application.",
+      "per_item_limits_en": [
+        "Tatami: up to 5 per day (Hello Gomi 2026) / up to 5 per application (web fee table)",
+        "Large and extra-large wardrobes and cupboards (90 cm wide or more): 1 per day (web fee table)"
+      ],
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+      ]
+    },
+    "information_to_give_en": "Items (check width, depth and height first, as size can change the fee) and the preferred collection date.",
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+  },
+  "collection": {
+    "days_en": "On the booked date only. No collection on Saturday or Sunday. Bulky waste has no fixed weekday per area; the regular collection-day table lists no bulky waste column.",
+    "put_out_by": {
+      "time": "08:00",
+      "conflict_note_en": "The city web page says by 8:00 on the collection day; the Hello Gomi 2026 booklet (p.10-11) says by 8:30. Safer to tell users 8:00.",
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+      ]
+    },
+    "place_en": "The collection place given when you book. The crew does not carry items out of the house, garage or premises; you must bring items to the place yourself.",
+    "crew_note_en": "Collection takes the whole day; put everything out at once, nothing later.",
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html"
+  },
+  "areas": {
+    "summary_en": "No separate bulky waste rules for North Nishinomiya (塩瀬・山口, north of the Rokko mountains) were found in official sources. The same booking centre, LINE account, fee table and collection rules apply city-wide. The booklet's collection-day table covers 山口町 and 名塩/塩瀬 together with the rest of the city and has no bulky waste column. No bulky waste facility or transfer point in the north was found: the only self-haul site is 東部総合処理センター on reclaimed land at 鳴尾浜 in the south.",
+    "south": {
+      "name_ja": "南部（六甲山系以南）",
+      "name_en": "South Nishinomiya",
+      "bulky_waste_rules": "city-wide rules",
+      "facilities": ["西部総合処理センター（西宮浜）", "東部総合処理センター（鳴尾浜）"],
+      "facilities_note_en": "Both plants are on reclaimed coastal land (西宮浜, 鳴尾浜), as the user expected."
+    },
+    "north": {
+      "name_ja": "北部（塩瀬・山口）",
+      "name_en": "North Nishinomiya (Shioze and Yamaguchi)",
+      "bulky_waste_rules": "city-wide rules; nothing area-specific published",
+      "booking": "same channels (0798-33-6776, LINE @miyakko)",
+      "collection_days": "on booking, Monday to Friday; no area weekday published",
+      "contractor": null,
+      "contractor_note_en": "Not published on the pages reviewed. A search snippet of an older city teaching document said household waste north of the Hankyu Kobe line is collected by contractors, but that document could not be opened, so it is not used as a source.",
+      "own_facility": false,
+      "own_facility_note_en": "No northern plant or transfer point was found. Self-haul from the north goes to 東部総合処理センター (鳴尾浜, south coast).",
+      "local_offices": [
+        {
+          "name_ja": "塩瀬支所",
+          "address_ja": "西宮市名塩新町1番 塩瀬センター1階",
+          "phone": "0797-61-0521",
+          "role_en": "Sells stickers (支所 are sticker sellers) and refunds unused stickers.",
+          "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html"
+        },
+        {
+          "name_ja": "山口支所",
+          "address_ja": "西宮市山口町下山口4丁目1番8号 山口センター1階",
+          "phone": "078-904-0395",
+          "role_en": "Sells stickers and refunds unused stickers.",
+          "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html"
+        }
+      ]
+    },
+    "source_urls": [
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/gomisyuusyuubiitirann17.pdf",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html",
+      "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html"
+    ]
+  },
+  "size_limits": {
+    "bulky_if_en": "Weight 5 kg or more, or does not fit in one designated bag (for long rod-shaped items: 1 m or longer). An item that fits in one bag but whose bag cannot be tied shut is bulky waste.",
+    "bulky_if_ja": "重量が5kg以上のもの、1枚の指定袋に入らないもの（ただし、棒状のものは1m以上）",
+    "normal_waste_if_en": "From April 2026: under 5 kg, fits in one designated bag that can be tied shut, and rods under 1 m can go out as burnable waste (もやすごみ) or other non-burnable waste (その他不燃ごみ).",
+    "self_haul_guideline_en": "The self-haul page uses a different guideline: 40 cm or longer, or 5 kg or more, counts as bulky waste; some smaller or lighter items are also bulky.",
+    "conflict_note_en": "Collection pages use '5 kg / does not fit one bag / rods 1 m'; the self-haul page uses '40 cm / 5 kg'.",
+    "garden_waste_self_haul": [
+      {"thickness": "under 2 cm", "max_length": "50 cm", "class": "burnable"},
+      {"thickness": "2-5 cm", "max_length": "50 cm", "class": "burnable"},
+      {"thickness": "bamboo", "max_length": "50 cm", "class": "burnable"},
+      {"thickness": "5-20 cm", "max_length": "1 m", "class": "bulky"},
+      {"thickness": "20-40 cm", "max_length": "60 cm", "class": "bulky"},
+      {"thickness": "40 cm or more", "max_length": "20 cm (cut into rounds)", "class": "bulky"}
+    ],
+    "preparation_en": [
+      "Remove batteries and fluorescent tubes from appliances and lights and put them out as その他不燃ごみ.",
+      "Drain all fuel (kerosene) from heaters and fan heaters.",
+      "Electric-assist bicycles: leave the battery removable with the key, or remove it and tape it to the bike, or put it in the front basket."
+    ],
+    "source_urls": [
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf",
+      "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html"
+    ]
+  },
+  "not_accepted": [
+    {
+      "item_ja": "家電リサイクル法対象品目（エアコン、テレビ（ブラウン管・液晶・プラズマ）、冷蔵庫・冷凍庫、洗濯機・衣類乾燥機）",
+      "item_en": "Home Appliance Recycling Law items: air conditioners, TVs, refrigerators/freezers, washing machines/clothes dryers",
+      "advice_en": "Not collected and not accepted at city plants. If buying a new one, ask the shop that sells it to take the old one. Otherwise ask a member shop of 西宮電化商組合 (list on the city page), or buy a recycling ticket at a post office and take the item to the designated collection point 株式会社善商 (西宮市西宮浜2丁目6番, 0798-31-6377). Recycling fee and transport fee apply.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/eakon-tv-shobun.html"
+    },
+    {
+      "item_ja": "パソコン（デスクトップ・ノート・一体型・モニター）",
+      "item_en": "Personal computers and monitors",
+      "advice_en": "Not collected. Use the manufacturer's take-back (free with the PC Recycle mark), the PC 3R Promotion Association (03-5282-7685), or the city's partner Renet Japan Recycling home pick-up (free for one box if it includes a PC). Erase your data yourself.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/kaeipc-shobun.html"
+    },
+    {
+      "item_ja": "原動機付自転車・単車（自動二輪車）",
+      "item_en": "Motorcycles and mopeds",
+      "advice_en": "Not collected or processed by the city since April 2005. Ask the shop where you bought it, or the Motorcycle Recycling Call Center (050-3000-0727).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/nirinsha.html"
+    },
+    {
+      "item_ja": "タイヤ・バッテリー・タイヤ付ホイール等（自動車・バイク用品）",
+      "item_en": "Tyres, car/motorbike batteries, wheels with tyres",
+      "advice_en": "Not accepted. Take to a dealer; tyres only to a tyre shop.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf"
+    },
+    {
+      "item_ja": "消火器",
+      "item_en": "Fire extinguishers",
+      "advice_en": "Not collected. Contact 西宮市民共済生活協同組合 (0798-23-5566), 山本環境整備 (0798-44-5500) or 甲南防災設備 (0798-23-1890).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sidehasyuusyusinai12.pdf"
+    },
+    {
+      "item_ja": "プロパンガス（ボンベ）・空気ボンベ",
+      "item_en": "Propane gas cylinders, compressed-air cylinders",
+      "advice_en": "Not accepted. Propane: the dealer or the Hyogo LP Gas Association (078-361-8064). Air cylinders: the dealer. (Small cassette gas canisters are different: use them up and put them out as その他不燃ごみ.)",
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/tiikiseisou13.pdf"
+      ]
+    },
+    {
+      "item_ja": "ピアノ",
+      "item_en": "Pianos (acoustic)",
+      "advice_en": "Not accepted; ask a dealer. Digital pianos are accepted (collection fee 600 yen; can also be self-hauled).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf"
+    },
+    {
+      "item_ja": "耐火金庫",
+      "item_en": "Fireproof safes",
+      "advice_en": "Not collected. Contact 榎本金庫 (078-521-4561).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sidehasyuusyusinai12.pdf"
+    },
+    {
+      "item_ja": "ガソリン・灯油・軽油・オイル等の油脂類、その他火災・爆発の危険があるもの",
+      "item_en": "Petrol, kerosene, diesel, oil and other fire or explosion risks",
+      "advice_en": "Not accepted; ask the shop that sells it.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf"
+    },
+    {
+      "item_ja": "塗料缶（中身の入ったもの）",
+      "item_en": "Paint cans that still contain paint",
+      "advice_en": "Not accepted; ask the shop that sells it.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf"
+    },
+    {
+      "item_ja": "自然石",
+      "item_en": "Natural stone",
+      "advice_en": "Not accepted; ask a landscaper or stone dealer.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf"
+    },
+    {
+      "item_ja": "建築廃材（解体・増改築に伴うもの。がれき・石膏ボード・瓦・木材・畳・壁紙・フローリング等）",
+      "item_en": "Building and demolition waste",
+      "advice_en": "Not accepted; the building contractor must dispose of it.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf"
+    },
+    {
+      "item_ja": "リフォームで出るビルトインコンロ（IH含む）・室外給湯器・システムキッチンなど",
+      "item_en": "Built-in cookers (incl. IH), outdoor water heaters, system kitchens from renovation",
+      "advice_en": "Ask the construction contractor.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+    },
+    {
+      "item_ja": "業務用エアコン・業務用冷凍冷蔵庫（家庭で使用していたもの）",
+      "item_en": "Commercial air conditioners and refrigeration units used at home",
+      "advice_en": "Can be self-hauled only after the refrigerant (CFC) has been recovered, with the recovery certificate.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html"
+    },
+    {
+      "item_ja": "在宅医療廃棄物の注射針",
+      "item_en": "Home medical needles",
+      "advice_en": "Return to a pharmacy or medical institution.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sidehasyuusyusinai12.pdf"
+    },
+    {
+      "item_ja": "小型充電式電池（ニカド・ニッケル水素・リチウムイオン）・モバイルバッテリー",
+      "item_en": "Small rechargeable batteries and power banks",
+      "advice_en": "Not collected. Use JBRC collection boxes at partner shops, or self-haul to 東部総合処理センター (booking 14 days to 1 day ahead). Swollen power banks alone can be booked for the same day (Mon-Fri).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html"
+    },
+    {
+      "item_ja": "一時多量ごみ（引越し・大掃除・植木剪定）、物置（1畳を超えるもの）、事業活動に伴うごみ",
+      "item_en": "Large one-off amounts (moving, big clean-up, tree pruning), sheds over 1 tatami mat, business waste",
+      "advice_en": "Not collected. Self-haul to 東部総合処理センター (book on 0798-22-6600) or hire the licensed operator にしのみや環境サポート協同組合 (0798-36-7806, paid).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sidehasyuusyusinai12.pdf"
+    }
+  ],
+  "special_services": {
+    "assisted_collection": {
+      "name_ja": "にこやか収集",
+      "name_en": "Nikoyaka door-to-door collection",
+      "covers_bulky_waste": false,
+      "summary_en": "Staff collect household waste at the front door for households where nobody can take waste to the collection point (care level 1 or higher, or certain disability certificates). Bulky waste and clear-out waste are NOT covered. For bulky waste, the city does not carry items out of homes.",
+      "apply_en": "Online via にしのみやスマート申請, by post, or in person at 美化第2課 (no fax). From April 2026 the application method changed.",
+      "contact": "美化第2課 0798-41-6265",
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/tetsuzuki/nikoyaka.html",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/tiikiseisou13.pdf"
+      ]
+    },
+    "reuse_partners_en": "Before disposal the city suggests reuse via partner services Oikura, Jimoty and Mercari, and the Jimoty Spot Nishinomiyahama shop (opened 3 July 2026; drop-off without booking, 10:00-18:00, closed Tuesday). Bulky items self-hauled to the plant may be reused by the city unless you refuse when booking.",
+    "reuse_source_urls": [
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html",
+      "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html"
+    ]
+  },
+  "self_haul": {
+    "facility_ja": "東部総合処理センター",
+    "address_ja": "西宮市鳴尾浜2丁目1番4号",
+    "since": "2026-04-01",
+    "previous_note_en": "Until 31 March 2026 self-haul went to 西部総合処理センター (西宮浜3丁目8). Its crushing/sorting plant closed when the new 東部 resource recycling facility opened on 1 April 2026.",
+    "booking": {
+      "required": true,
+      "phone": "0798-22-6600",
+      "name_ja": "西宮市ごみ電話受付センター（持込み）",
+      "hours_en": "Monday to Friday, including public holidays, 9:00 to 17:30",
+      "window_en": "From 14 days before (Sundays and holidays counted) until the day before. No same-day booking. First come, first served; daily capacity is limited.",
+      "who_en": "The person who produced the waste books and brings it. Only waste from homes in Nishinomiya. Show ID with your address. A relative within the second degree can bring it for you with the relative application form."
+    },
+    "accepted_types_ja": ["粗大ごみ", "その他不燃ごみ", "缶・ペットボトル", "びん", "もやすごみ"],
+    "hours": {
+      "days_en": "Monday to Saturday, including public holidays. Closed Sunday.",
+      "bulky_and_non_burnable": "08:00-15:30",
+      "burnable": "08:00-16:30",
+      "note_en": "15:30-16:30 burnable only. If booked for the 8 o'clock slot, do not arrive before 8:00. Unload by yourself; staff do not help."
+    },
+    "fee": {
+      "from": "2026-04-01",
+      "first_50kg_yen": 450,
+      "per_additional_10kg_yen": 90,
+      "payment": "cash only (bring 1,000-yen notes and coins)",
+      "applies_to_en": "Total weight of all waste brought. From April 2026 all waste types are charged, including burnable waste (before: bulky 300 yen per 50 kg + 60 yen per 10 kg, burnable and non-burnable free).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/oshirase/shoritesuuryou.html"
+    },
+    "restrictions_en": "Daily limits for blocks, bricks, tiles, laundry pole stands, gravel, soil, gas canisters, spray cans, mattresses, futons and bicycles. Waste from your own DIY replacement of fixtures may need an on-site check. Waste from licensed contractors (renovation, electrical, gas work) is industrial waste and not accepted.",
+    "source_urls": [
+      "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html",
+      "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf",
+      "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+    ]
+  },
+  "contacts": [
+    {"name_ja": "ごみ電話受付センター（粗大ごみ収集）", "phone": "0798-33-6776"},
+    {"name_ja": "ごみ電話受付センター（持込み予約）", "phone": "0798-22-6600"},
+    {"name_ja": "美化第1課", "phone": "0798-33-4758", "address_ja": "西宮市西宮浜3丁目8"},
+    {"name_ja": "美化企画課", "phone": "0798-35-8653"},
+    {"name_ja": "美化第2課", "phone": "0798-41-6265", "address_ja": "西宮市鳴尾浜2丁目1-4"},
+    {"name_ja": "施設管理課", "phone": "0798-22-6601", "note_en": "This number does not take self-haul bookings."}
+  ],
+  "sources": [
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/moshikomi.html", "title": "粗大ごみの収集には、申し込み予約が必要です。｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html", "title": "粗大（大型）ごみ料金表｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.html", "title": "ハローごみ2026【新分別区分】｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf", "title": "西宮市ハローごみ2026 粗大ごみ（料金表）10-13ページ (PDF)", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sidehasyuusyusinai12.pdf", "title": "西宮市ハローごみ2026 市では収集・処分しないごみ 28ページ (PDF)", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/tiikiseisou13.pdf", "title": "西宮市ハローごみ2026 地域清掃・催し物などのごみ収集・にこやか収集 31ページ (PDF)", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/gomisyuusyuubiitirann17.pdf", "title": "西宮市ハローごみ2026 ごみの収集日一覧表 44-47ページ (PDF)", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html", "title": "ごみの持込みについて【一般家庭の方】｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.files/genchikakunin.pdf", "title": "持込めないごみ・持込みに制限があるごみ・現地立ち合い調査の必要なごみについて (PDF)", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/oshirase/shoritesuuryou.html", "title": "令和8年4月1日から廃棄物処理手数料を改定します。｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/eakon-tv-shobun.html", "title": "エアコン・テレビ・冷蔵（凍）庫・洗濯機・衣類乾燥機の処分｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/kaeipc-shobun.html", "title": "家庭用パソコンの処分｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/nirinsha.html", "title": "自動二輪車（原動機付自転車を含む）の処理について｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/tetsuzuki/nikoyaka.html", "title": "にこやか収集｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html", "title": "粗大ごみ処理券払い戻し施設｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/sodaiuketukehennkou.html", "title": "「ごみ電話受付センター」・「電話受付センター」の開設日時が変更になります！！｜西宮市ホームページ", "retrieved": "2026-11-16"},
+    {"url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/seibusougou.html", "title": "処理センターにおける小型充電式電池による発煙・発火について｜西宮市ホームページ", "retrieved": "2026-11-16"}
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "city": {
+    "name_ja": "芦屋市",
+    "name_en": "Ashiya City",
+    "prefecture_ja": "兵庫県",
+    "prefecture_en": "Hyogo Prefecture"
+  },
+  "municipality_code": "282065",
+  "municipality_code_note": "全国地方公共団体コード: 5-digit code 28206 plus check digit 5, computed with the standard check-digit rule. Not found printed on the Ashiya pages reviewed.",
+  "fee_model": {
+    "type": "per_item",
+    "summary_en": "Paid, per item. Each item has a fixed fee from 300 to 2,400 yen, paid with 300-yen bulky waste stickers (粗大ごみ処理券). Book by phone first, then buy the stickers.",
+    "ticket": {
+      "name_ja": "粗大ごみ処理券（シール）",
+      "unit_price_yen": 300,
+      "unit_note": "All fees are multiples of 300 yen. The booking centre tells you how many stickers you need and where to buy them.",
+      "where_to_buy_ja": "スーパー、コンビニエンスストア、文具店、酒店、お近くの雑貨店や市役所売店、ラポルテサービスコーナー等",
+      "where_to_buy_en": "Supermarkets, convenience stores, stationery shops, liquor shops, local general stores, the City Hall shop, the Laporte service corner and others.",
+      "how_to_use_en": "Write your name on the sticker and stick it on the item.",
+      "refund_en": "Stickers cannot be refunded. They have no expiry date, so keep them for next time. Do not put stickers on waste you self-haul; that is charged by weight and the stickers are not refunded.",
+      "store_list_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_ken.html",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html"
+    },
+    "cashless": {
+      "available": false,
+      "note_en": "No cashless payment for collection is mentioned on the city pages."
+    },
+    "fee_range_yen": [300, 2400],
+    "fee_list_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html",
+    "fee_list_note_en": "Items not in the list are charged as the most similar item, considering height, width, length and weight.",
+    "cheaper_option_note_en": "For heavy items, self-hauling to the plant (free up to 10 kg) can be cheaper.",
+    "source_urls": [
+      "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html",
+      "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html",
+      "https://www.city.ashiya.lg.jp/kankyoushori/mochikomi/index.html"
+    ]
+  },
+  "booking": {
+    "required": true,
+    "same_day_collection": false,
+    "channels": [
+      {
+        "type": "phone",
+        "name_ja": "粗大ごみ予約センター",
+        "phone": "0797-22-2166",
+        "hours_ja": "祝日を含む月曜日～金曜日の午前9時～午後4時",
+        "hours_en": "Monday to Friday, including public holidays, 9:00 to 16:00",
+        "note_en": "Lines are busy at the start of the week and just after opening. In some apartment buildings you apply through the building manager.",
+        "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html"
+      },
+      {
+        "type": "fax",
+        "fax": "0797-32-6247",
+        "note_en": "Provisional booking for people who cannot phone. Send name, phone number, address, items, quantity, size and the preferred date (Mon-Fri). The booking is complete only after the centre contacts you.",
+        "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html"
+      },
+      {
+        "type": "web",
+        "available": false,
+        "note_en": "No web booking form for bulky waste was found on the city site."
+      },
+      {
+        "type": "line",
+        "available": false,
+        "note_en": "No LINE booking for bulky waste was found on the city site."
+      }
+    ],
+    "lead_time": {
+      "published_en": "No fixed number of days is published. It takes 'a certain number of days' from booking to collection, varying by season; bookings just before the wanted date may not be accepted, so book early (especially when moving).",
+      "source_urls": [
+        "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html",
+        "https://www.city.ashiya.lg.jp/kankyoushori/oshirase/uketukejyouhou.html"
+      ]
+    },
+    "max_per_booking": {
+      "published_en": null,
+      "note_en": "No limit on items per booking is published. Some fee-list entries have their own quantity rules (e.g. futons/blankets up to 3 per fee, floor cushions up to 5, golf clubs up to 10)."
+    },
+    "information_to_give_en": "Phone number, name and address; where you will put the items; items and quantity (the centre confirms the number of stickers); preferred collection date (Monday to Friday, including public holidays).",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html"
+  },
+  "collection": {
+    "days_en": "On the booked date, Monday to Friday including public holidays. No fixed weekday per area for bulky waste; the crew covers the whole city in one day.",
+    "put_out_by": {
+      "time": "08:30",
+      "source_urls": [
+        "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html",
+        "https://www.city.ashiya.lg.jp/kankyoushori/oshirase/uketukejyouhou.html"
+      ]
+    },
+    "place_en": "The place agreed at booking, outside your private property. Crew do not enter private premises. Items left elsewhere are not collected. The crew will not come back later or wait for you to finish putting items out.",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/oshirase/uketukejyouhou.html"
+  },
+  "areas": {
+    "summary_en": "No area-specific bulky waste rules were found. One booking centre, one fee list and one plant serve the whole city, including the hillside area (奥池町, 奥池南町). The only plant, 芦屋市環境処理センター, is at 浜風町 on the coastal reclaimed land, as the user expected. Regular household waste has per-district calendars (地区1, 地区2, ...), but bulky waste is not in them.",
+    "source_urls": [
+      "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html",
+      "https://www.city.ashiya.lg.jp/kankyoushori/calendar/r8/tiku04.html",
+      "https://www.city.ashiya.lg.jp/kankyoushori/mochikomi/index.html"
+    ]
+  },
+  "size_limits": {
+    "bulky_if_en": "Burnable items whose longest side is 50 cm or more, and other non-burnable items whose longest side is 30 cm or more (umbrellas and fluorescent tubes excepted).",
+    "bulky_if_ja": "一番長い辺が50センチ以上の「燃やすごみ」や一番長い辺が30センチ以上の「その他燃やさないごみ」（傘・蛍光灯は除く）",
+    "normal_waste_if_en": "Burnable waste: longest side under 50 cm, in the designated bag. Branches: cut to 50 cm long and 10 cm diameter, tied in bundles you can carry with one hand.",
+    "source_urls": [
+      "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html",
+      "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/burnable.html"
+    ]
+  },
+  "not_accepted": [
+    {
+      "item_ja": "家電4品目（エアコン、テレビ、冷蔵庫・冷凍庫・ワインセラー、洗濯機・衣類乾燥機）",
+      "item_en": "Home Appliance Recycling Law items: air conditioners, TVs, refrigerators/freezers/wine coolers, washing machines/clothes dryers",
+      "advice_en": "Options: sell for reuse; the city's paid partner SG Moving (0570-056-006, carries out from inside the home, pay on collection); the shop where you bought it; a shop that takes them without a new purchase (ヒガシでんき 0797-32-7588, 東洋テレビラジオセンター 0797-32-1771); or buy a recycling ticket at a post office and take it to a designated collection point ((株)善商, 西宮市西宮浜, 0798-31-6377, or 西濃運輸 神戸支店, 078-857-6963). Commercial-use appliances and any product using CFCs are not accepted at the plant.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/recycle/kaden.html"
+    },
+    {
+      "item_ja": "パソコン（デスクトップ本体、ディスプレイ、ノートパソコン）",
+      "item_en": "Personal computers and monitors",
+      "advice_en": "The city does not collect PCs. Use the partner Renet Japan Recycling home pick-up (one box free if it includes a PC; 140 cm / 20 kg) or the manufacturer's take-back (free with the PC Recycle mark; otherwise ask PC 3R Promotion Association, 03-5282-7685).",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/recycle/pc_recycle.html"
+    },
+    {
+      "item_ja": "バイク（原動機付自転車含む）",
+      "item_en": "Motorcycles and mopeds",
+      "advice_en": "Ask the shop where you bought it or a dealer. Check the Motorcycle Recycling System (call centre 050-3000-0727). Bicycles and motorcycle parts alone are not covered by that system.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/recycle/autobike.html"
+    },
+    {
+      "item_ja": "自動車部品（タイヤ、ホイール、バッテリーなど）",
+      "item_en": "Car parts: tyres, wheels, batteries",
+      "advice_en": "Ask a car dealer or garage, or a nearby petrol station.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    },
+    {
+      "item_ja": "消火器",
+      "item_en": "Fire extinguishers",
+      "advice_en": "Ask the shop or maker, or マルイ商店 (船戸町11-2, 23-0170). Postal (Yu-Pack) collection via the Fire Extinguisher Recycling Promotion Center is also possible.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    },
+    {
+      "item_ja": "プロパン（ガスボンベ）",
+      "item_en": "Propane gas cylinders",
+      "advice_en": "Ask the shop or maker, or マルイ商店 (23-0170) for propane. Small cassette gas canisters: use them up and put them out as その他燃やさないごみ in a see-through bag.",
+      "source_urls": [
+        "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html",
+        "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/not_burn.html"
+      ]
+    },
+    {
+      "item_ja": "ガソリン、オイル、石油、廃油、発煙（炎）筒、中身の入ったスプレー缶など",
+      "item_en": "Petrol, oil, kerosene, waste oil, flares, spray cans with contents",
+      "advice_en": "Ask the shop or maker; for petrol and oil, a nearby petrol station.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    },
+    {
+      "item_ja": "処理困難物（土砂、ブロック、れんが、石、塗料、ラッカー、シンナー、木の根、ボーリング球、鉛蓄電池など）",
+      "item_en": "Hard-to-process items: soil, blocks, bricks, stones, paint, lacquer, thinner, tree roots, bowling balls, lead batteries",
+      "advice_en": "Ask the shop or maker. Soil and blocks: 足立商店 (若宮町9-13, 23-0566). Tree roots: a landscaper.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    },
+    {
+      "item_ja": "建築廃材（鉄骨・かわら・建具など）",
+      "item_en": "Building waste (steel frames, roof tiles, fittings)",
+      "advice_en": "Use an industrial waste contractor.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    },
+    {
+      "item_ja": "在宅医療系廃棄物・有害物質（注射器、点滴針、有害薬品、農薬、医薬品、アスベスト・PCB使用製品）",
+      "item_en": "Home medical waste and hazardous substances",
+      "advice_en": "Return to a pharmacy or medical institution (as published).",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    },
+    {
+      "item_ja": "ピアノ",
+      "item_en": "Pianos (acoustic)",
+      "advice_en": null,
+      "note_en": "Not found on the city pages reviewed. The fee list includes organs and digital pianos (2,100 yen) but no acoustic piano.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html"
+    },
+    {
+      "item_ja": "事業系ごみ",
+      "item_en": "Business waste",
+      "advice_en": "Contract a licensed collector or bring it to the plant yourself.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html"
+    }
+  ],
+  "special_services": {
+    "assisted_collection": {
+      "name_ja": "さわやか収集（粗大ごみ）",
+      "name_en": "Sawayaka assisted collection (bulky waste)",
+      "covers_bulky_waste": true,
+      "summary_en": "City staff collect bulky waste from inside the home for people living alone (or with someone who also cannot carry it) who are about 65 or older with any care or support certification, or who hold a disability certificate or have a designated intractable disease and use home care. Only items staff can carry without strain; no dismantling or special carrying-out. Stickers are still required.",
+      "apply_en": "Book with the bulky waste booking centre (0797-22-2166) and say 'さわやか収集希望'. The city phones on the day to check you are at home.",
+      "household_waste_variant_en": "Separate weekly doorstep collection of household waste for people with care level 2 or higher using home-visit care, or disability certificate holders using home care; apply through a care manager or 収集事業課.",
+      "page_updated": "2021-11-11",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/sawayaka.html"
+    },
+    "large_one_off_collection": {
+      "name_ja": "一時多量ごみ・植木剪定ごみ（有料）",
+      "summary_en": "Paid collection of sorted waste from moving or of garden prunings. Book with 収集事業課 (0797-22-2155) by the working day before; be present and pay cash after the work. Fees by load in a 2 t truck: moving waste 4,800 / 9,600 / 14,400 yen; prunings 1,800 / 3,600 / 6,000 yen (up to 1/3, 1/3 to 2/3, over 2/3 of the truck).",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/taryougomi.html"
+    },
+    "reuse_partners_en": "The city suggests selling or giving items away via partner services Oikura and Jimoty before disposal.",
+    "reuse_source_url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html"
+  },
+  "self_haul": {
+    "facility_ja": "芦屋市環境処理センター",
+    "address_ja": "芦屋市浜風町31-1",
+    "booking": {
+      "required": true,
+      "phone": "0797-32-5375",
+      "name_ja": "持ち込みごみ予約センター",
+      "hours_en": "Monday to Friday, including public holidays, 9:00 to 16:30 (busy 9:00-13:00)",
+      "window_en": "From 4 weeks before. Weekday drop-off: same-day booking possible until noon. Saturday drop-off: book by 16:30 the day before. You can book up to 6 days. No bookings 29 December to 3 January.",
+      "who_en": "Give name, address, phone, where the waste comes from, type and amount, date and time, and who brings it. Anyone other than a household member needs a letter of authorisation."
+    },
+    "accepted_en": "Waste produced in Ashiya that is not on the 'cannot process' list. Wood must be cut to 50 cm long and 10 cm diameter; no tree roots. Some items have quantity limits; ask when booking.",
+    "hours": {
+      "weekdays": "09:00-11:30, 13:00-16:30",
+      "saturday": "09:00-12:30"
+    },
+    "fee": {
+      "free_up_to_kg": 10,
+      "free_note_en": "Free up to 10 kg once per day per vehicle.",
+      "over_10kg_up_to_100kg_yen": 1080,
+      "per_additional_100kg_yen": 1080,
+      "payment": "cash only; each visit is settled separately; two vehicles are charged separately"
+    },
+    "procedure_en": "Go to the weighbridge reception, give names, show ID (driving licence etc.), unload by yourself (burnable at the incinerator, non-burnable at the 不燃物処理棟), re-weigh and pay. One-way traffic inside: exit towards 浜風大橋.",
+    "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/mochikomi/index.html"
+  },
+  "future_changes": {
+    "summary_en": "Ashiya and Kobe signed an agreement on 25 March 2025 for joint processing of burnable waste. From fiscal 2030 or later, burnable waste is to be gathered at a transfer facility in Ashiya and incinerated in Kobe (planned: 港島クリーンセンター). Residents' sorting rules stay Ashiya's. Earlier talks with Nishinomiya on a joint plant (2017-2020) did not reach agreement.",
+    "source_urls": [
+      "https://www.city.ashiya.lg.jp/kankyoushori/kouikika/ashiya_kobe_gomikouikisyori_kyougisyo.html"
+    ]
+  },
+  "contacts": [
+    {"name_ja": "粗大ごみ予約センター", "phone": "0797-22-2166"},
+    {"name_ja": "持ち込みごみ予約センター", "phone": "0797-32-5375"},
+    {"name_ja": "環境処理センター（収集事業課）", "phone": "0797-22-2155", "fax": "0797-32-6247", "hours_en": "Mon-Fri incl. holidays 7:30-16:00 (closed 12:00-12:45)", "role_en": "Bulky waste collection"},
+    {"name_ja": "環境処理センター（環境施設課）", "phone": "0797-32-5391", "fax": "0797-22-1599", "role_en": "Stickers, facilities"}
+  ],
+  "sources": [
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai.html", "title": "粗大ごみ収集までの流れ - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_tesuuryou.html", "title": "粗大ごみ品目別手数料一覧表 - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/oshirase/uketukejyouhou.html", "title": "芦屋市／粗大ごみ受付留意事項", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/sodaigomi.html", "title": "芦屋市／FAQ）粗大ごみの処分はどうすればいいのですか？", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/sodai_ken.html", "title": "粗大ごみ処理券取扱店一覧表 - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/toriatsukai.html", "title": "市で収集・処理できないごみ - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/recycle/kaden.html", "title": "家電4品目の処理（エアコン、テレビ、冷蔵庫・冷凍庫・ワインセラー、洗濯機・衣類乾燥機） - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/recycle/pc_recycle.html", "title": "パソコンのリサイクル - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/recycle/autobike.html", "title": "バイク - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/sawayaka.html", "title": "さわやか収集 - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/taryougomi.html", "title": "芦屋市／引っ越しごみ等の一時多量ごみや植木剪定ごみ（有料）", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/mochikomi/index.html", "title": "ごみの直接持ち込みについて（予約制） - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/burnable.html", "title": "燃やすごみ - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/syuusyuu/not_burn.html", "title": "その他燃やさないごみ(指定ごみ袋でだすごみ） - 芦屋市", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/calendar/r8/tiku04.html", "title": "芦屋市／家庭ごみ収集カレンダー地区4（奥池町、奥池南町、東芦屋町、東山町、松ノ内町、船戸町）", "retrieved": "2026-11-16"},
+    {"url": "https://www.city.ashiya.lg.jp/kankyoushori/kouikika/ashiya_kobe_gomikouikisyori_kyougisyo.html", "title": "芦屋市／神戸市との可燃ごみの広域処理に向けた協議書の締結", "retrieved": "2026-11-16"}
+  ]
+}

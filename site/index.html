@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pointsman collection demo</title>
+<meta name="description" content="Book a bulky waste collection in Nishinomiya or Ashiya. Pointsman checks the booking and picks a day that fits the collection route, with a reason for each.">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<!-- Before the first paint: sets the theme. A file, not inline, for the CSP (site/_headers). -->
+<script src="theme.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="https://pointsman.net/demos/"><img class="mark light" src="favicon.svg" alt="" width="22" height="22"><img class="mark dark" src="mark-on-dark.svg" alt="" width="22" height="22"><span>Pointsman</span><span class="tag" data-i18n="demo">collection demo</span></a>
+  <nav>
+    <button class="chip" id="dev-toggle" type="button" aria-pressed="false" aria-controls="dev"><span data-i18n="devTitle">For developers</span></button>
+    <button class="chip" id="lang" type="button" lang="ja">日本語</button>
+    <button class="chip" id="theme" type="button" aria-label="Switch theme">◐</button>
+  </nav>
+</header>
+
+<div class="layout">
+  <main>
+    <section class="intro">
+      <h1 data-i18n="title">Bulky waste, collected on a day that fits</h1>
+      <p data-i18n="lead">Book a bulky waste collection in Nishinomiya or Ashiya, step by step. The items and fees are the cities' own lists, kept in GeonicDB, a FIWARE data platform. Pointsman checks the booking, and picks a day that fits the collection truck's route, with a reason for each.</p>
+      <p class="note" data-i18n="care">A demo: nothing goes to the cities, no truck comes, and the booking is deleted after a day. The route costs are a simple model for now, not real routes. Book with your city for a real collection.</p>
+    </section>
+
+    <section class="card flow" id="flow" aria-labelledby="flow-title">
+      <ol class="steps" aria-label="Steps" data-i18n-label="steps">
+        <li data-step="1"><span data-i18n="s1">Place</span></li>
+        <li data-step="2"><span data-i18n="s2">Items</span></li>
+        <li data-step="3"><span data-i18n="s3">Day</span></li>
+        <li data-step="4"><span data-i18n="s4">Check and send</span></li>
+        <li data-step="5"><span data-i18n="s5">Result</span></li>
+      </ol>
+      <h2 id="flow-title"></h2>
+      <div id="flow-before"></div>
+      <section class="map-wrap" id="map-wrap" aria-label="Map">
+        <div class="map-box"><div id="map"></div></div>
+        <p class="status" id="status" role="status"></p>
+      </section>
+      <div id="flow-body"></div>
+    </section>
+  </main>
+
+  <aside class="dev" id="dev" hidden aria-labelledby="dev-title">
+    <h2 id="dev-title" data-i18n="devTitle">For developers</h2>
+    <p data-i18n="devLead">What the page asks the data platform (NGSI-LD), and what it gets back.</p>
+    <h3 data-i18n="devCatalog">The city's catalogue (CatalogItem entities)</h3>
+    <pre id="dev-catalog" class="muted"></pre>
+    <h3 data-i18n="devRequest">The booking (ServiceRequest entity)</h3>
+    <pre id="dev-request" class="muted"></pre>
+    <h3 data-i18n="devIntake">Pointsman's intake decision (Decision entity)</h3>
+    <pre id="dev-intake" class="muted"></pre>
+    <h3 data-i18n="devSlot">Pointsman's day decision (Decision entity)</h3>
+    <pre id="dev-slot" class="muted"></pre>
+    <p class="links">
+      <a href="https://github.com/geolonia/pointsman-demo-collection" data-i18n="lSource">Source of this demo</a>
+      <a href="https://github.com/geolonia/pointsman" data-i18n="lPointsman">Pointsman</a>
+    </p>
+  </aside>
+</div>
+
+<footer>
+  <p><span data-i18n="credit">Items and fees: the bulky waste pages of Nishinomiya City and Ashiya City (see the source).</span> · <a href="https://maps.gsi.go.jp/development/ichiran.html" data-i18n="gsi">GSI map tiles</a> · <a href="https://github.com/geolonia/pointsman-demo-collection" data-i18n="lSource">Source of this demo</a></p>
+</footer>
+
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>

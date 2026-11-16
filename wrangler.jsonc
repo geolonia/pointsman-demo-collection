@@ -1,0 +1,47 @@
+// The demo Worker. No resource ids here (a public repository). Secrets: see
+// README.md.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pointsman-demo-collection",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  "observability": { "enabled": true },
+  "routes": [{ "pattern": "collection.demo.pointsman.net", "custom_domain": true }],
+  // Only the custom domain: the Cache API does nothing on workers.dev, so
+  // every request there would reach the broker.
+  "workers_dev": false,
+  "vars": {
+    "BROKER_URL": "https://geolonia-demo.geonicdb.jp",
+    "BROKER_TENANT": "pointsman_collection",
+    // Pointsman runs on workers.dev in the same account (see compatibility_flags).
+    "POINTSMAN_URL": "https://pointsman.geolonia.workers.dev",
+    // Bookings a day for the whole demo, besides 5 a minute per visitor.
+    "DAILY_LIMIT": "300"
+  },
+  // The pages (site/). The Worker answers the API and the bridge (/notify);
+  // everything else is a static file.
+  "assets": {
+    "directory": "./site",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/notify"]
+  },
+  "ratelimits": [
+    // Per visitor, and for all visitors together (one key). Cloudflare counts
+    // per location and only roughly, so both keep bursts small, nothing more.
+    { "name": "REQUEST_LIMIT", "namespace_id": "1004", "simple": { "limit": 5, "period": 60 } },
+    { "name": "ALL_REQUESTS_LIMIT", "namespace_id": "1005", "simple": { "limit": 20, "period": 60 } }
+  ],
+  // Hourly: delete bookings older than a day, with their Decision and Task entities.
+  "triggers": { "crons": ["37 * * * *"] },
+  // The bridge's queue: notifications are answered at once and handled here
+  // with retries; the slot route (chained on the intake) runs only from it.
+  // The queues must exist before a deploy (wrangler queues create ...).
+  "queues": {
+    "producers": [
+      { "binding": "BRIDGE_QUEUE", "queue": "pointsman-demo-collection-bridge" },
+      { "binding": "BRIDGE_DLQ", "queue": "pointsman-demo-collection-bridge-dlq" }
+    ],
+    "consumers": [{ "queue": "pointsman-demo-collection-bridge", "max_batch_timeout": 1, "max_retries": 20, "max_concurrency": 1, "dead_letter_queue": "pointsman-demo-collection-bridge-dlq" }]
+  }
+}

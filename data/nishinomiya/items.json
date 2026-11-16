@@ -1,0 +1,2027 @@
+[
+  {
+    "name_ja": "アイロン台",
+    "name_en": "Ironing board",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "アコーディオンカーテン",
+    "name_en": "Accordion curtain (folding door)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "網戸・雨戸",
+    "name_en": "Window screen / storm shutter",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "アンテナ・パラボラアンテナ",
+    "name_en": "TV antenna / satellite dish",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "石うす",
+    "name_en": "Stone hand mill",
+    "category": "other",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "衣装ケース",
+    "name_en": "Clothes storage case",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "いす（回転いすを除く）",
+    "name_en": "Chair (not swivel chair)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "板・板の束",
+    "name_en": "Board / bundle of boards",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "一輪車（運搬用手押し一輪車）",
+    "name_en": "Wheelbarrow",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "衣類エアウォッシャー",
+    "name_en": "Clothes air washer",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "植木棚（4段以下）",
+    "name_en": "Plant shelf (4 tiers or fewer)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "4段以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "植木棚（5段以上）",
+    "name_en": "Plant shelf (5 tiers or more)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "5段以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ウッドカーペット（8畳未満）",
+    "name_en": "Wood-panel carpet (under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "8畳未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ウッドカーペット（8畳以上）",
+    "name_en": "Wood-panel carpet (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "エアマット",
+    "name_en": "Air mattress",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "エアロバイク（サイクリングマシーン）",
+    "name_en": "Exercise bike",
+    "category": "sports",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "エレクトーン",
+    "name_en": "Electone (electronic organ)",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "オイルヒーター",
+    "name_en": "Oil heater",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "応接椅子（1人掛）",
+    "name_en": "Armchair (1 seat)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "1人掛",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "応接椅子（2人掛以上）",
+    "name_en": "Armchair / settee (2 seats or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "2人掛以上",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "応接テーブル 小（長さ1m未満）",
+    "name_en": "Coffee table, small (under 1 m long)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "長さ1m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "応接テーブル 大（長さ1m以上）",
+    "name_en": "Coffee table, large (1 m long or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "長さ1m以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "オットマン・スツール",
+    "name_en": "Ottoman / stool",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "オルガン",
+    "name_en": "Organ",
+    "category": "appliance",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "温水洗浄便座",
+    "name_en": "Bidet toilet seat",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "回転椅子・回転座椅子",
+    "name_en": "Swivel chair / swivel floor chair",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ガーデニングテーブル",
+    "name_en": "Garden table",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "カーペット（3畳以下）",
+    "name_en": "Carpet (3 tatami mats or less)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "3畳以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "カーペット（3畳超え8畳未満）",
+    "name_en": "Carpet (over 3, under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "3畳超え8畳未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "カーペット（8畳以上）",
+    "name_en": "Carpet (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "鏡（スタンドミラー・姿見鏡）",
+    "name_en": "Mirror (standing / full-length)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ガスオーブンレンジ",
+    "name_en": "Gas oven range",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ガスコンロ（2口）",
+    "name_en": "Gas cooker (2 burners)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "2口",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "カラス除けネットボックス（1m未満）",
+    "name_en": "Crow-proof waste box (under 1 m)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "1m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "カラス除けネットボックス（1m以上）",
+    "name_en": "Crow-proof waste box (1 m or more)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "1m以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ギター",
+    "name_en": "Guitar",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "キッチンカウンター（長さ1m未満）",
+    "name_en": "Kitchen counter (under 1 m long)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "長さ1m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "キッチンカウンター（長さ1m以上）",
+    "name_en": "Kitchen counter (1 m long or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "長さ1m以上",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "キッチンワゴン",
+    "name_en": "Kitchen trolley",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "キャリーバッグ・スーツケース",
+    "name_en": "Wheeled bag / suitcase",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "鏡台・三面鏡（椅子は別料金）",
+    "name_en": "Dressing table / three-panel mirror (chair charged separately)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "空気清浄機",
+    "name_en": "Air purifier",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "クーラーボックス（電源なし・冷温機能なし）",
+    "name_en": "Cool box (no power, no cooling/heating)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "車いす",
+    "name_en": "Wheelchair",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "健康器具（足ふみステッパー他）",
+    "name_en": "Fitness equipment (stepper etc.)",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "健康器具（ぶら下がり器具・サイクリングマシーン他）",
+    "name_en": "Fitness equipment (pull-up stand, exercise bike etc.)",
+    "category": "sports",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "健康器具（ランニングマシン他）",
+    "name_en": "Fitness equipment (treadmill etc.)",
+    "category": "sports",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "げた箱",
+    "name_en": "Shoe cabinet",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "高圧洗浄機（家庭用）",
+    "name_en": "Pressure washer (household)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ゴザ（8畳未満）",
+    "name_en": "Rush mat (under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "8畳未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ゴザ（8畳以上）",
+    "name_en": "Rush mat (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "こたつ（天板含む）幅1m未満",
+    "name_en": "Kotatsu heated table incl. top (under 1 m wide)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "こたつ（天板含む）幅1m以上",
+    "name_en": "Kotatsu heated table incl. top (1 m wide or more)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "こたつの天板のみ",
+    "name_en": "Kotatsu table top only",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "こたつ布団",
+    "name_en": "Kotatsu quilt",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ゴルフクラブセットのみ",
+    "name_en": "Golf club set only",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ゴルフバックのみ",
+    "name_en": "Golf bag only",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ゴルフ用具（クラブセット・バック）",
+    "name_en": "Golf equipment (club set and bag)",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "サーフボード（2m以下）",
+    "name_en": "Surfboard (2 m or less)",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": "2m以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "座椅子（回転式以外）",
+    "name_en": "Floor chair (not swivel)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "サイドテーブル",
+    "name_en": "Side table",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "サイドボード",
+    "name_en": "Sideboard",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "座敷テーブル小（長さ1m未満）",
+    "name_en": "Low table, small (under 1 m long)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "長さ1m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "座敷テーブル大（長さ1m以上）",
+    "name_en": "Low table, large (1 m long or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "長さ1m以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "三輪自転車",
+    "name_en": "Adult tricycle",
+    "category": "bicycle",
+    "fee_yen": 1800,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "三輪車（子供用）",
+    "name_en": "Children's tricycle",
+    "category": "bicycle",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "敷物（3畳以下）",
+    "name_en": "Rug (3 tatami mats or less)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "3畳以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "敷物（3畳超え8畳未満）",
+    "name_en": "Rug (over 3, under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "3畳超え8畳未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "敷物（8畳以上）",
+    "name_en": "Rug (8 tatami mats or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "8畳以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "自転車（折りたたみ）",
+    "name_en": "Bicycle (folding)",
+    "category": "bicycle",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "自転車子供用（24インチ未満）",
+    "name_en": "Children's bicycle (under 24 inch)",
+    "category": "bicycle",
+    "fee_yen": 600,
+    "size_note": "24インチ未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "自転車大人用（24インチ以上）",
+    "name_en": "Adult bicycle (24 inch or more)",
+    "category": "bicycle",
+    "fee_yen": 1200,
+    "size_note": "24インチ以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "障子",
+    "name_en": "Shoji paper screen door",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食器洗い乾燥機",
+    "name_en": "Dishwasher-dryer",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食器乾燥機（乾燥機能のみ）",
+    "name_en": "Dish dryer (drying only)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食器棚（幅90cm以下）",
+    "name_en": "Cupboard (90 cm wide or less)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅90cm以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食器棚（幅91cm以上120cm以下）",
+    "name_en": "Cupboard (91 to 120 cm wide)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "幅91cm以上120cm以下",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食器棚（幅121cm以上）",
+    "name_en": "Cupboard (121 cm wide or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "幅121cm以上",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食卓椅子（回転いすを除く）",
+    "name_en": "Dining chair (not swivel)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "食卓テーブル",
+    "name_en": "Dining table",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ショッピングカート",
+    "name_en": "Shopping trolley",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "姿見鏡",
+    "name_en": "Full-length mirror",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "スキー板・スノーボード",
+    "name_en": "Skis / snowboard",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "すだれ（2本まで同じ料金）",
+    "name_en": "Bamboo blind (up to 2 for one fee)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "2本まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "スチールラック（幅90cm未満）",
+    "name_en": "Steel rack (under 90 cm wide)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "幅90cm未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "スチールラック（幅90cm以上）",
+    "name_en": "Steel rack (90 cm wide or more)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅90cm以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "スチールロッカー",
+    "name_en": "Steel locker",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ストーブ（石油・ガス・電気）灯油を抜いて出す。",
+    "name_en": "Heater (kerosene, gas or electric); drain the kerosene first",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": "灯油を抜いて出す。",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ストライダー（ペダルなし幼児用自転車）",
+    "name_en": "Balance bike (no pedals, for small children)",
+    "category": "bicycle",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "スプリングマットレス",
+    "name_en": "Spring mattress",
+    "category": "bedding",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "すべり台（子供用遊具）",
+    "name_en": "Slide (children's play equipment)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ズボンプレッサー",
+    "name_en": "Trouser press",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "扇風機",
+    "name_en": "Electric fan",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "掃除機",
+    "name_en": "Vacuum cleaner",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ソファー（一人掛け）",
+    "name_en": "Sofa (1 seat)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ソファー（二人掛け以上）",
+    "name_en": "Sofa (2 seats or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "二人掛け以上",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ソファー電動（一人掛け）",
+    "name_en": "Electric recliner sofa (1 seat)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ソファー電動（二人掛け以上）",
+    "name_en": "Electric recliner sofa (2 seats or more)",
+    "category": "furniture",
+    "fee_yen": 1800,
+    "size_note": "二人掛け以上",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ソファーベッド",
+    "name_en": "Sofa bed",
+    "category": "bedding",
+    "fee_yen": 1800,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "台車・キャリーカート",
+    "name_en": "Hand truck / carry cart",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "高枝切りハサミ（1.5m未満）",
+    "name_en": "Long-reach pruning shears (under 1.5 m)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "1.5m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "高枝切りハサミ（1.5m以上）",
+    "name_en": "Long-reach pruning shears (1.5 m or more)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "1.5m以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "たたみ（1畳）1日5枚まで",
+    "name_en": "Tatami mat (1 mat; up to 5 per day)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "1畳; 1日5枚まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "建具（障子・ふすま・網戸など）",
+    "name_en": "Fittings (shoji, fusuma, window screens etc.)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "タンス（幅90cm以下）",
+    "name_en": "Chest of drawers / wardrobe (90 cm wide or less)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅90cm以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "タンス（91cm以上120cm以下）",
+    "name_en": "Chest of drawers / wardrobe (91 to 120 cm)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "91cm以上120cm以下",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "タンス（幅121cm以上）",
+    "name_en": "Chest of drawers / wardrobe (121 cm wide or more)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "幅121cm以上",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "チャイルドシート（ジュニアシート）",
+    "name_en": "Child car seat (booster seat)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "調理台",
+    "name_en": "Kitchen worktop unit",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "衝立（ついたて）・パーティション",
+    "name_en": "Room screen / partition",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "机（椅子は別途料金）平机・学習机・製図机",
+    "name_en": "Desk: flat, study or drafting desk (chair charged separately)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "釣り竿（10本まで同じ料金）",
+    "name_en": "Fishing rod (up to 10 for one fee)",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": "10本まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "テーブル（1m未満）座敷・応接",
+    "name_en": "Table, low or coffee (under 1 m)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "1m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "テーブル（1m以上2m以下）座敷・応接",
+    "name_en": "Table, low or coffee (1 to 2 m)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "1m以上2m以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "テーブル（食卓）",
+    "name_en": "Table (dining)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "鉄板（バーベキュー用）",
+    "name_en": "Griddle plate (for barbecue)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "テレビボード（60cm以下）",
+    "name_en": "TV stand (60 cm or less)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "60cm以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "テレビボード（幅61cm以上90cm以下）",
+    "name_en": "TV stand (61 to 90 cm wide)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "幅61cm以上90cm以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "テレビボード（幅91cm以上）",
+    "name_en": "TV stand (91 cm wide or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "幅91cm以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "電子ピアノ",
+    "name_en": "Digital piano",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "電子レンジ",
+    "name_en": "Microwave oven",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "電動アシスト自転車",
+    "name_en": "Electric-assist bicycle",
+    "category": "bicycle",
+    "fee_yen": 1800,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "電動カート（高齢者）・電動車いす",
+    "name_en": "Mobility scooter (for older people) / electric wheelchair",
+    "category": "other",
+    "fee_yen": 3600,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "電動式ベッド・介護ベッド",
+    "name_en": "Electric bed / nursing-care bed",
+    "category": "bedding",
+    "fee_yen": 3600,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "電話台",
+    "name_en": "Telephone stand",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "籐いす",
+    "name_en": "Rattan chair",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "籐の敷物（8畳未満）",
+    "name_en": "Rattan rug (under 8 tatami mats)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "8畳未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "籐の敷物（8畳以下）",
+    "name_en": "Rattan rug (larger size; printed as \"8 tatami mats or less\")",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "8畳以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ドレッサー（椅子は別途料金）",
+    "name_en": "Dresser (chair charged separately)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "波板（2枚まで同じ料金）",
+    "name_en": "Corrugated sheet (up to 2 for one fee)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "2枚まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "バーベキューコンロ・バーベキューセット",
+    "name_en": "Barbecue grill / barbecue set",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "パイプハンガー",
+    "name_en": "Clothes rail (pipe hanger)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "はしご（1.5m未満）",
+    "name_en": "Ladder (under 1.5 m)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "1.5m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "はしご（1.5m以上2m未満）",
+    "name_en": "Ladder (1.5 to under 2 m)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "1.5m以上2m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ハンガーラック",
+    "name_en": "Hanger rack",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ビーズクッション（1m未満）",
+    "name_en": "Beanbag (under 1 m)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "1m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ビーズクッション（1.5m未満）",
+    "name_en": "Beanbag (under 1.5 m)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "1.5m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ビーズクッション（2m未満）",
+    "name_en": "Beanbag (under 2 m)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "2m未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ビーチパラソル（レジャーパラソル）",
+    "name_en": "Beach umbrella",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ビーチベッド・サマーベッド・ボンボンベッド",
+    "name_en": "Sun lounger / folding cot",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ひな人形（棚も含む）・さつき人形",
+    "name_en": "Hina or May festival doll set (incl. stand)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ファンヒーター（石油・ガス）灯油を抜いて出す。",
+    "name_en": "Fan heater (kerosene or gas); drain the kerosene first",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": "灯油を抜いて出す。",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ふすま",
+    "name_en": "Fusuma sliding door",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ふとん（2枚まで同じ料金）",
+    "name_en": "Futon (up to 2 for one fee)",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": "2枚まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ふとん干し",
+    "name_en": "Futon drying rack",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "プリンター（家庭用）",
+    "name_en": "Printer (household)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ブロック（5個まで同じ料金）",
+    "name_en": "Concrete block (up to 5 for one fee)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "5個まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "風呂のふた",
+    "name_en": "Bathtub cover",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ペットゲージ・ペットサークル",
+    "name_en": "Pet cage / pet pen",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベッド（シングル・折りたたみ・ベビーベッド）",
+    "name_en": "Bed (single, folding or baby bed)",
+    "category": "bedding",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベッド（セミダブル以上・二段ベッド）",
+    "name_en": "Bed (semi-double or larger, bunk bed)",
+    "category": "bedding",
+    "fee_yen": 900,
+    "size_note": "セミダブル以上・二段ベッド",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベッドマットレス（スプリングなし）シングル",
+    "name_en": "Bed mattress without springs (single)",
+    "category": "bedding",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベッドマットレス（スプリングなし）セミダブル以上",
+    "name_en": "Bed mattress without springs (semi-double or larger)",
+    "category": "bedding",
+    "fee_yen": 900,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベッドマットレス（スプリングあり）",
+    "name_en": "Bed mattress with springs",
+    "category": "bedding",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベビーカー（一人乗り）",
+    "name_en": "Baby stroller (single)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベビーカー（二人乗り）",
+    "name_en": "Baby stroller (double)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベビーチェア・ベビーラック",
+    "name_en": "Baby chair / baby rocker",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ベビーバス",
+    "name_en": "Baby bath",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "歩行器",
+    "name_en": "Walker",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "本箱（卓上型）",
+    "name_en": "Bookcase (desktop)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "本箱（90cm未満）",
+    "name_en": "Bookcase (under 90 cm)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "90cm未満",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "本箱（90cm以上）",
+    "name_en": "Bookcase (90 cm or more)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "90cm以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "マッサージチェア",
+    "name_en": "Massage chair",
+    "category": "appliance",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "マットレス（2枚まで同じ料金）ベッドマットレスを除く",
+    "name_en": "Floor mattress, not bed mattress (up to 2 for one fee)",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": "2枚まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ミシン（ポータブル）",
+    "name_en": "Sewing machine (portable)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ミシン（足踏み型）",
+    "name_en": "Sewing machine (treadle)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "餅つき機",
+    "name_en": "Rice-cake maker",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "物置（半畳以下）",
+    "name_en": "Storage shed (half a tatami mat or less)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "半畳以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "物置（1畳以下）",
+    "name_en": "Storage shed (1 tatami mat or less)",
+    "category": "other",
+    "fee_yen": 900,
+    "size_note": "1畳以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "物干し竿（3本まで同じ料金）",
+    "name_en": "Laundry pole (up to 3 for one fee)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "3本まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "物干し台一対（コンクリート以外の土台）",
+    "name_en": "Laundry pole stands, pair (non-concrete base)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "物干し台一対（コンクリートの土台）",
+    "name_en": "Laundry pole stands, pair (concrete base)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "湯沸かし器（室内用）",
+    "name_en": "Water heater (indoor)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ライティングデスク（椅子は別料金）",
+    "name_en": "Writing desk (chair charged separately)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ラティス小（90cm×90cm）2枚まで同じ料金",
+    "name_en": "Lattice panel, small (90 x 90 cm; up to 2 for one fee)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "90cm×90cm; 2枚まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ラティス小（180cm×90cm）",
+    "name_en": "Lattice panel (180 x 90 cm)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "180cm×90cm",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ランニングマシン",
+    "name_en": "Treadmill",
+    "category": "sports",
+    "fee_yen": 1200,
+    "size_note": null,
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "リクライニングチェア",
+    "name_en": "Reclining chair",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ルーフキャリア・ルーフラック",
+    "name_en": "Car roof carrier / roof rack",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ルーフボックス（2mまで）",
+    "name_en": "Car roof box (up to 2 m)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "2mまで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "冷風機（家庭用・クーラー機能なし）",
+    "name_en": "Air cooler (household, no air-conditioning)",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "レンジ台",
+    "name_en": "Microwave stand",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "レンジ台（米びつ付）",
+    "name_en": "Microwave stand with rice bin",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "レンガ（10個まで同じ料金）",
+    "name_en": "Brick (up to 10 for one fee)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "10個まで同じ料金",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ロッキングチェア",
+    "name_en": "Rocking chair",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "ワードプロセッサー（デスクトップ型も含む）",
+    "name_en": "Word processor (incl. desktop type)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/harogomi2026.files/sodaigomi6.pdf"
+  },
+  {
+    "name_ja": "カラーボックス・テレビ台・電話台",
+    "name_en": "Cube storage box / TV stand / telephone stand",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "チェスト",
+    "name_en": "Chest of drawers (small)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "人工芝小（長さ9メートル以下）",
+    "name_en": "Artificial turf, small (9 m long or less)",
+    "category": "other",
+    "fee_yen": 600,
+    "size_note": "長さ9メートル以下",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "人工芝大（長さ9メートル超）",
+    "name_en": "Artificial turf, large (over 9 m long)",
+    "category": "other",
+    "fee_yen": 1200,
+    "size_note": "長さ9メートル超",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "スリッパ立て・傘立て・キャビネット",
+    "name_en": "Slipper rack / umbrella stand / cabinet",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "衣装箱（2個まで）",
+    "name_en": "Clothes box (up to 2)",
+    "category": "furniture",
+    "fee_yen": 300,
+    "size_note": "2個まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "ファンシーケース",
+    "name_en": "Fabric wardrobe (fancy case)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "ブラインド（2本まで）",
+    "name_en": "Window blind (up to 2)",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": "2本まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "よしず",
+    "name_en": "Reed screen",
+    "category": "furniture",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "夏布団・毛布（計4枚まで）",
+    "name_en": "Summer futon / blanket (up to 4 in total)",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": "計4枚まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "座布団・枕・クッション（計5枚まで）",
+    "name_en": "Floor cushion / pillow / cushion (up to 5 in total)",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": "計5枚まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "照明器具",
+    "name_en": "Light fitting",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "電気スタンド大（床置き型）",
+    "name_en": "Floor lamp, large",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "除湿機・加湿器・空気清浄機",
+    "name_en": "Dehumidifier / humidifier / air purifier",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "布団乾燥機",
+    "name_en": "Futon dryer",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "電気毛布",
+    "name_en": "Electric blanket",
+    "category": "bedding",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "オイルヒーター・パネルヒーター",
+    "name_en": "Oil heater / panel heater",
+    "category": "appliance",
+    "fee_yen": 600,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "炊飯器・電気餅つき機・ホームベーカリー",
+    "name_en": "Rice cooker / rice-cake maker / bread maker",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "ホットプレート・電磁調理具",
+    "name_en": "Hot plate / induction cooker",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "浄水器",
+    "name_en": "Water purifier",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "電子・ガスレンジ・オーブントースター",
+    "name_en": "Microwave or gas oven / toaster oven",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "湯沸し器・換気扇（窓据付）",
+    "name_en": "Water heater / window extractor fan",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "乗用おもちゃ",
+    "name_en": "Ride-on toy",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "自転車空気入れ",
+    "name_en": "Bicycle pump",
+    "category": "bicycle",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "自転車用子供いす",
+    "name_en": "Child bicycle seat",
+    "category": "bicycle",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "電動三輪自転車",
+    "name_en": "Electric tricycle",
+    "category": "bicycle",
+    "fee_yen": 2400,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "編み機・編み機の台",
+    "name_en": "Knitting machine / knitting machine stand",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "植木棚小（4段まで）・フラワースタンド",
+    "name_en": "Plant shelf, small (up to 4 tiers) / flower stand",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "4段まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "簡易便座・おまる（きれいにしてから、袋に入れてお出しください）",
+    "name_en": "Portable toilet seat / potty (clean it and put it in a bag)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "脚立・はしご",
+    "name_en": "Stepladder / ladder",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "ごみ箱（径・高さ40センチメートル以上）",
+    "name_en": "Waste bin (40 cm or more across or high)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "径・高さ40センチメートル以上",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "ゴルフ用具・スキー用具・剣道用具",
+    "name_en": "Golf, ski or kendo equipment",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "テント・バーベキューセット",
+    "name_en": "Tent / barbecue set",
+    "category": "sports",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "灯油ポリタンク",
+    "name_en": "Kerosene plastic tank",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "プランター（3個まで）",
+    "name_en": "Planter (up to 3)",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "3個まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "物干し竿（3本まで）・ランドリーラック・室内物干し台",
+    "name_en": "Laundry poles (up to 3) / laundry rack / indoor drying stand",
+    "category": "other",
+    "fee_yen": 300,
+    "size_note": "3本まで",
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "ファックス機能付電話・コピー機（家庭用）",
+    "name_en": "Phone with fax / copier (household)",
+    "category": "appliance",
+    "fee_yen": 300,
+    "size_note": null,
+    "two_person": false,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "洋服・和タンス大（幅90センチメートル以上120センチメートル未満）1日1つまで",
+    "name_en": "Wardrobe, large (90 to under 120 cm wide; 1 per day)",
+    "category": "furniture",
+    "fee_yen": 900,
+    "size_note": "幅90センチメートル以上120センチメートル未満; 1日1つまで",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  },
+  {
+    "name_ja": "洋服・和タンス超（幅120センチメートル以上）1日1つまで",
+    "name_en": "Wardrobe, extra large (120 cm wide or more; 1 per day)",
+    "category": "furniture",
+    "fee_yen": 1200,
+    "size_note": "幅120センチメートル以上; 1日1つまで",
+    "two_person": true,
+    "source_url": "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/ryokinhyo.html"
+  }
+]
