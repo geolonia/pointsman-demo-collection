@@ -30,6 +30,14 @@ cases:
     expect: plan
     answers: {}
     facts: { kinds: { value: 12 }, max_kinds: { missing: no_value }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "a limit sent as text: review, not plan"
+    expect: review
+    answers: {}
+    facts: { kinds: { value: 8 }, max_kinds: { missing: wrong_kind }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "no limit at all (left out): plan"
+    expect: plan
+    answers: {}
+    facts: { kinds: { value: 8 }, max_kinds: { missing: no_value }, not_collected: { value: 0 }, carry_out: { value: false } }
   - name: "a count sent as text: review (never converted)"
     expect: review
     answers: {}

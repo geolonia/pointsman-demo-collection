@@ -27,8 +27,10 @@ facts:
   - { name: carry_out, type: field_flag, at: $.carryOut.value }
 policy:
   rules:
-    # A broken request: a person looks at it.
-    - when: "facts.kinds.missing == true or facts.not_collected.missing == true or facts.carry_out.missing == true"
+    # A broken request: a person looks at it. A limit sent as the wrong kind
+    # (text, not a number) is broken too; a limit left out (no_value) is not:
+    # the city has none.
+    - when: "facts.kinds.missing == true or facts.not_collected.missing == true or facts.carry_out.missing == true or facts.max_kinds.reason == 'wrong_kind'"
       action: review
     # Items the city does not collect as bulky waste (home appliance
     # recycling, PCs, and so on): the resident is told where to take them.

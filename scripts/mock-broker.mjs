@@ -23,7 +23,8 @@ const v = (e, name) => e[name]?.value;
 /** bulky-waste-intake v1: [rule index or "default", action]. */
 function intake(e) {
   const [kinds, max, not, carry] = [v(e, 'itemKinds'), v(e, 'maxItemKinds'), v(e, 'notCollectedCount'), v(e, 'carryOut')];
-  if (typeof kinds !== 'number' || typeof not !== 'number' || typeof carry !== 'boolean') return ['0', 'review'];
+  // A limit of the wrong kind is broken too; a limit left out means the city has none.
+  if (typeof kinds !== 'number' || typeof not !== 'number' || typeof carry !== 'boolean' || (max !== undefined && typeof max !== 'number')) return ['0', 'review'];
   if (not > 0) return ['1', 'redirect'];
   if (kinds < 1) return ['2', 'ask'];
   if (typeof max === 'number' && kinds > max) return ['3', 'ask'];
