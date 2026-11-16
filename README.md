@@ -10,11 +10,4 @@ This repository was scaffolded by Geolonia Backstage.
 - Implement your website code.
 - Keep `catalog-info.yaml` up to date.
 
-## TechDocs
-
-This repository ships with TechDocs preconfigured:
-
-- `mkdocs.yml` and `docs/index.md` are the starting point for your docs.
-- `.github/workflows/publish-techdocs.yml` publishes them to Backstage on every push to the default branch.
-
-Run `mkdocs serve` locally to preview.
+Like the other Pointsman demos, this repository has no TechDocs: the README is its documentation.
