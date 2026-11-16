@@ -1,0 +1,51 @@
+# Test cases for bulky-waste-slot. Rules only: facts and the intake decision. Run:
+#   node engine/scripts/test-profile.mjs cases --profiles profiles
+profile: bulky-waste-slot
+fixtures:
+  plan: &plan { action: plan }
+cases:
+  - name: "the intake did not let it through: hold"
+    expect: hold
+    answers: {}
+    decisions: { intake: { action: redirect } }
+    facts: { date_need: { value: any }, wished_ok: { value: true }, wished_extra: { value: 3 }, best_found: { value: true }, best_extra: { value: 3 } }
+  - name: "any day, a cheap day exists: assign_best"
+    expect: assign_best
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: any }, wished_ok: { value: false }, wished_extra: { value: -1 }, best_found: { value: true }, best_extra: { value: 6 } }
+  - name: "any day, but every day is expensive: offer days"
+    expect: offer_days
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: any }, wished_ok: { value: false }, wished_extra: { value: -1 }, best_found: { value: true }, best_extra: { value: 35 } }
+  - name: "a preferred day that costs little: accept"
+    expect: accept
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: preferred }, wished_ok: { value: true }, wished_extra: { value: 9 }, best_found: { value: true }, best_extra: { value: 4 } }
+  - name: "a preferred day that costs a lot: offer days"
+    expect: offer_days
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: preferred }, wished_ok: { value: true }, wished_extra: { value: 28 }, best_found: { value: true }, best_extra: { value: 5 } }
+  - name: "moving out on that day: accept even when it costs more"
+    expect: accept
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: fixed }, wished_ok: { value: true }, wished_extra: { value: 28 }, best_found: { value: true }, best_extra: { value: 5 } }
+  - name: "moving out, but the wished day is full: offer days"
+    expect: offer_days
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: fixed }, wished_ok: { value: false }, wished_extra: { value: 12 }, best_found: { value: true }, best_extra: { value: 5 } }
+  - name: "the intake decision was answered by a person with plan: goes on"
+    expect: accept
+    answers: {}
+    decisions: { intake: { action: review, outcome: plan, reviewed: true } }
+    facts: { date_need: { value: preferred }, wished_ok: { value: true }, wished_extra: { value: 4 }, best_found: { value: true }, best_extra: { value: 4 } }
+  - name: "no day in two weeks: a person"
+    expect: review
+    answers: {}
+    decisions: { intake: *plan }
+    facts: { date_need: { value: any }, wished_ok: { value: false }, wished_extra: { value: -1 }, best_found: { value: false }, best_extra: { value: -1 } }

@@ -1,0 +1,36 @@
+# Test cases for bulky-waste-intake. Rules only: only facts. Run:
+#   node engine/scripts/test-profile.mjs cases --profiles profiles
+profile: bulky-waste-intake
+cases:
+  - name: "two kinds, all collected, put out by the resident: plan"
+    expect: plan
+    answers: {}
+    facts: { kinds: { value: 2 }, max_kinds: { value: 5 }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "a washing machine among the items: redirect"
+    expect: redirect
+    answers: {}
+    facts: { kinds: { value: 3 }, max_kinds: { value: 5 }, not_collected: { value: 1 }, carry_out: { value: false } }
+  - name: "more kinds than one booking may have: ask"
+    expect: ask
+    answers: {}
+    facts: { kinds: { value: 8 }, max_kinds: { value: 5 }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "exactly the limit: plan"
+    expect: plan
+    answers: {}
+    facts: { kinds: { value: 5 }, max_kinds: { value: 5 }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "no items: ask"
+    expect: ask
+    answers: {}
+    facts: { kinds: { value: 0 }, max_kinds: { value: 5 }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "carrying out of the home: a person arranges it"
+    expect: review
+    answers: {}
+    facts: { kinds: { value: 1 }, max_kinds: { value: 5 }, not_collected: { value: 0 }, carry_out: { value: true } }
+  - name: "a city without a limit: many kinds are fine"
+    expect: plan
+    answers: {}
+    facts: { kinds: { value: 12 }, max_kinds: { missing: no_value }, not_collected: { value: 0 }, carry_out: { value: false } }
+  - name: "a count sent as text: review (never converted)"
+    expect: review
+    answers: {}
+    facts: { kinds: { missing: wrong_kind }, max_kinds: { value: 5 }, not_collected: { value: 0 }, carry_out: { value: false } }

@@ -1,0 +1,82 @@
+{
+  "coordinates_method": "WGS84 [lon, lat] from the GSI address search API (https://msearch.gsi.go.jp/address-search/AddressSearch?q=<official address>), called on 2026-11-16 with the address as published by the city. GSI matches at block (番地) level, so a point may be up to a few hundred metres from the gate. The query string and the matched GSI title are recorded per facility.",
+  "facilities": [
+    {
+      "city": "西宮市",
+      "name_ja": "東部総合処理センター（焼却施設・資源循環施設「みやっこリサイクルパーク」）",
+      "name_en": "Nishinomiya East General Waste Treatment Center (incineration plant and resource recycling facility 'Miyakko Recycle Park')",
+      "kind": ["incineration", "crushing/sorting", "self-haul reception"],
+      "kind_note_en": "Incineration plant plus the resource recycling facility, which processes cans/PET bottles, glass bottles, other non-burnable waste and bulky waste (56 t/day). The recycling facility opened on 1 April 2026 and replaced the crushing/sorting plant and Recycle Plaza at 西部総合処理センター. Since 1 April 2026 it is the only self-haul site for households.",
+      "area": "South Nishinomiya, reclaimed coastal land (鳴尾浜)",
+      "address_ja": "兵庫県西宮市鳴尾浜2丁目1番4号",
+      "postal_code": "663-8142",
+      "location": [135.362885, 34.68906],
+      "geocode": {"query": "兵庫県西宮市鳴尾浜2丁目1-4", "matched": "兵庫県西宮市鳴尾浜二丁目１番地", "level": "block (1番地)"},
+      "accepts_self_haul": true,
+      "self_haul_types_ja": ["粗大ごみ", "その他不燃ごみ", "缶・ペットボトル", "びん", "もやすごみ"],
+      "self_haul_hours": "Monday to Saturday including public holidays (closed Sunday). Bulky, non-burnable, cans/PET, bottles 8:00-15:30; burnable 8:00-16:30. Booking required 14 days to 1 day ahead on 0798-22-6600 (Mon-Fri 9:00-17:30).",
+      "self_haul_fee": "450 yen up to 50 kg total, plus 90 yen per additional 10 kg or part (from 1 April 2026), cash only.",
+      "other_en": "Reuse items from bulky waste are shown and given away free at Miyakko Recycle Park (open Wed-Sun 10:00-16:00); free bicycle repair workshop.",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/toubu-shigen.html",
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/toubu-shigen.html",
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/tobu-syoukyaku.html",
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/toubu_hasai.html",
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html"
+      ]
+    },
+    {
+      "city": "西宮市",
+      "name_ja": "西部総合処理センター（焼却施設）",
+      "name_en": "Nishinomiya West General Waste Treatment Center (incineration plant)",
+      "kind": ["incineration"],
+      "kind_note_en": "Incineration plant. Its crushing/sorting plant (bulky and non-burnable waste) and Recycle Plaza closed when the East center's resource recycling facility opened on 1 April 2026. Until 31 March 2026 it was the household self-haul site. The building also houses the environment department offices (美化第1課, 施設管理課).",
+      "area": "South Nishinomiya, reclaimed coastal land (西宮浜)",
+      "address_ja": "兵庫県西宮市西宮浜3丁目8番",
+      "postal_code": "662-0934",
+      "location": [135.329834, 34.718578],
+      "geocode": {"query": "兵庫県西宮市西宮浜3丁目8", "matched": "兵庫県西宮市西宮浜三丁目８番地", "level": "block (8番地)"},
+      "accepts_self_haul": false,
+      "self_haul_hours": null,
+      "self_haul_fee": null,
+      "self_haul_note_en": "No household self-haul since 1 April 2026 (moved to 東部総合処理センター).",
+      "source_url": "https://www.nishi.or.jp/kurashi/gomi/shisetsu/w-shoricenter.html",
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/w-shoricenter.html",
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/toubu_hasai.html",
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/nishi-shori.html"
+      ]
+    },
+    {
+      "city": "芦屋市",
+      "name_ja": "芦屋市環境処理センター",
+      "name_en": "Ashiya City Environmental Treatment Center",
+      "kind": ["incineration", "crushing/sorting", "self-haul reception"],
+      "kind_note_en": "Incinerator plus a non-burnable waste building (不燃物処理棟) where self-hauled non-burnable waste is unloaded, and a wood crusher that self-haulers use for large amounts of wood. The exact processing method for bulky waste is not described on the pages used. The city plans to rebuild the plant; from fiscal 2030 or later burnable waste is to be sent via a transfer facility in Ashiya to Kobe for incineration.",
+      "area": "Coastal reclaimed land (浜風町)",
+      "address_ja": "兵庫県芦屋市浜風町31-1",
+      "postal_code": "659-0032",
+      "location": [135.322495, 34.718613],
+      "geocode": {"query": "兵庫県芦屋市浜風町31-1", "matched": "兵庫県芦屋市浜風町３１番", "level": "block (31番)"},
+      "accepts_self_haul": true,
+      "self_haul_hours": "Monday to Friday 9:00-11:30 and 13:00-16:30; Saturday 9:00-12:30. Booking required on 0797-32-5375 (Mon-Fri incl. holidays 9:00-16:30), from 4 weeks ahead; same-day booking until noon for weekdays.",
+      "self_haul_fee": "Free up to 10 kg (once per day per vehicle); over 10 kg up to 100 kg 1,080 yen; plus 1,080 yen per additional 100 kg. Cash only.",
+      "source_url": "https://www.city.ashiya.lg.jp/kankyoushori/mochikomi/index.html",
+      "source_urls": [
+        "https://www.city.ashiya.lg.jp/kankyoushori/mochikomi/index.html",
+        "https://www.city.ashiya.lg.jp/kankyoushori/kouikika/ashiya_kobe_gomikouikisyori_kyougisyo.html"
+      ]
+    }
+  ],
+  "not_found": [
+    {
+      "city": "西宮市",
+      "topic_en": "Facility, transfer point or separate contractor for bulky waste in North Nishinomiya (塩瀬・山口)",
+      "result_en": "None found in official sources. Booking, fees and collection are city-wide. The north has branch offices (塩瀬支所, 山口支所) that sell and refund bulky waste stickers, but no waste plant or transfer point is listed among the city's waste facilities.",
+      "source_urls": [
+        "https://www.nishi.or.jp/kurashi/gomi/shisetsu/index.html",
+        "https://www.nishi.or.jp/kurashi/gomi/gominoshushu/seikatsugomi/haraimodosi-sisetu.html"
+      ]
+    }
+  ]
+}

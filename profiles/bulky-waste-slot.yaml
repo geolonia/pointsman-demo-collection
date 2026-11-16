@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../engine/schema/profile-v1.schema.json
+# Collection demo, step 2 of 2: which collection day? Reads what one more
+# stop would cost each day of the next two weeks (`slotCosts`, written by the
+# Worker: a mock today, Vroom later) and how much the resident needs their
+# wished day. Rules only, no model.
+#
+# A draft kept next to the demo; the published copy lives in pointsman-config.
+id: bulky-waste-slot
+version: 1
+title:
+  en: Bulky waste collection day
+  ja: 粗大ごみの収集日
+description:
+  en: Accept the wished collection day, choose the cheapest day, or offer a few days, from what each day costs the collection route.
+  ja: 収集ルートへの影響から、希望日で受ける、最も負担の少ない日に決める、いくつかの日を示す、のいずれかを決める。
+model: none
+requires:
+  - { name: intake, profile: bulky-waste-intake }
+questions: []
+facts:
+  - { name: date_need, type: field_text, at: $.dateNeed.value }
+  - { name: wished_ok, type: field_flag, at: $.slotCosts.value.wishedFeasible }
+  - { name: wished_extra, type: field_number, at: $.slotCosts.value.wishedExtraMin }
+  - { name: best_found, type: field_flag, at: $.slotCosts.value.bestFound }
+  - { name: best_extra, type: field_number, at: $.slotCosts.value.bestExtraMin }
+policy:
+  rules:
+    # Only bookings the intake let through get a day.
+    - when: "decisions.intake.outcome != 'plan'"
+      action: hold
+    - when: "facts.date_need.missing == true or facts.wished_ok.missing == true or facts.best_found.missing == true"
+      action: review
+    # "Any day": the cheapest day, when it costs the route little.
+    - when: "facts.date_need.value == 'any' and facts.best_found.value == true and facts.best_extra.value <= 20"
+      action: assign_best
+    # The wished day costs the route little: accept it.
+    - when: "facts.wished_ok.value == true and facts.wished_extra.value <= 15"
+      action: accept
+    # The resident must have that day (moving out, handing back a flat):
+    # accept it even when it costs more, while the truck can still take it.
+    - when: "facts.date_need.value == 'fixed' and facts.wished_ok.value == true"
+      action: accept
+    # Only a preference, or the wished day is full: offer the cheapest days.
+    - when: "facts.best_found.value == true"
+      action: offer_days
+  # No day in the next two weeks can take it: a person finds a way.
+  default: review
+  people_check: [review]
+  people_answers: [accept, assign_best, offer_days, reject]

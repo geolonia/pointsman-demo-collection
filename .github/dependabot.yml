@@ -28,3 +28,21 @@ updates:
         update-types:
           - minor
           - patch
+
+  # "npm" also covers pnpm (it reads pnpm-lock.yaml).
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 8
+    groups:
+      npm:
+        update-types:
+          - minor
+          - patch
+    ignore:
+      # @cloudflare/vitest-plugin supports only vitest 4 (peer ^4.1.0). Remove
+      # this when the plugin supports the next major.
+      - dependency-name: vitest
+        update-types: ["version-update:semver-major"]
