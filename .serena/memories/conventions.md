@@ -1,6 +1,6 @@
 # Conventions
 
-Authoritative: AGENTS.md "Constraints", CONTRIBUTING.md. Key ones agents trip on:
+Authoritative: AGENTS.md "Constraints" and "Issue intake", CONTRIBUTING.md. Key ones agents trip on:
 - Public repo: no secrets, account ids, resource ids, or anything from the private deployment config. Secrets only via `wrangler secret put`.
 - DCO sign-off on every commit (`git commit -s`); small PRs with tests.
 - Issues and PRs in English (public repo).
