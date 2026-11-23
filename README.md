@@ -180,6 +180,28 @@ The profiles' test cases need an engine with the field facts (0.22.0 or
 later) and its fact modules: from the deployment config,
 `node engine/scripts/test-profile.mjs cases --profiles profiles`.
 
+Smoke tests of the page in a browser (`e2e/`, Playwright, desktop and
+mobile size), in CI as their own job and not part of `pnpm check`:
+
+```sh
+pnpm exec playwright install chromium   # once
+pnpm test:e2e
+```
+
+They start the Worker with `wrangler dev` on port 8788, with throwaway
+secrets and the broker, Pointsman and GSI geocoder addresses pointing at a
+closed local port, so they never reach the real services. These settings
+win over a local `.dev.vars`; its other values still apply. The page's
+files, `site/_headers` and `GET /api/config` are the real ones. The
+endpoints that need those services, and GSI's address search, are stubbed
+in the tests: a booking goes through the Worker's own functions (the
+cities and areas, the catalogues in `data/`, the route costs, the booking
+entity) and the bridge's own functions for what it writes; Pointsman's
+decisions are set by each test, so the tests check what the page sends and
+shows, not how Pointsman decides. One test checks that an unstubbed call
+fails at the closed port. Map tiles and MapLibre are blocked, so the map is
+not tested.
+
 No build step for the page: plain HTML, CSS and JavaScript in `site/`,
 MapLibre GL JS from unpkg with integrity hashes, GSI's map tiles. The page is
 served with a Content-Security-Policy ([site/_headers](site/_headers));
