@@ -169,6 +169,13 @@ footer { padding: 16px 24px 32px; color: var(--muted); font-size: 13px; max-widt
 .catalog small { color: var(--muted); }
 .not-collected .name { text-decoration: line-through; text-decoration-color: var(--red); }
 .not-collected .meta { color: var(--red); white-space: normal; max-width: 9em; }
+/* Phones: the name gets a row of its own, the price or label and the buttons the row under it. */
+@media (max-width: 480px) {
+  .catalog li { grid-template-columns: minmax(0, 1fr) auto; }
+  .lines li { grid-template-columns: 64px minmax(0, 1fr) auto; }
+  .catalog .name, .lines .name { grid-column: 1 / -1; }
+  .catalog .meta, .lines .meta, .not-collected .meta { white-space: normal; max-width: none; }
+}
 .field select { width: 100%; }
 .verdict.v-plan, .verdict.v-accept, .verdict.v-assign_best { border-color: var(--green); color: var(--green); }
 .verdict.v-offer_days, .verdict.v-ask, .verdict.v-hold { border-color: var(--amber); color: var(--amber); }
