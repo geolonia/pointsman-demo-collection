@@ -11,7 +11,7 @@
 //
 // See README.md.
 
-import { type BridgeConfig, type BridgeMessage, decisionEntityId, handleQueueBatch, handleRequest, type Route, taskEntityId } from '../engine/packages/fiware/src/bridge';
+import { type BridgeConfig, type BridgeMessage, decisionEntityId, handleQueueBatch, handleRequest, taskEntityId } from '../engine/packages/fiware/src/bridge';
 import { Broker, BrokerError, type Entity } from './broker';
 import { CATALOG_TYPE, type CatalogItem, fromCatalogEntity } from './catalog';
 import { areaOf, CITIES, type City, cityByCode, WINDOW_DAYS } from './cities';
@@ -19,7 +19,8 @@ import { bridgeReady, checkEnv, type Env, trimUrl } from './env';
 import { GeocoderError, placeOf } from './geocode';
 import { fetchWithAgent } from './http';
 import { collectionDays, dayCosts, SERVICE_MIN, SERVICE_TWO_PERSON_MIN, type Stop, summarize, todayJst } from './plan';
-import { type Costs, dayOf, INTAKE_INPUTS, isRequestId, type Line, parseBooking, REQUEST_TYPE, RequestError, SLOT_INPUTS, tally, toRequestEntity } from './requests';
+import { type Costs, dayOf, isRequestId, type Line, parseBooking, REQUEST_TYPE, RequestError, tally, toRequestEntity } from './requests';
+import { INTAKE_ROUTE, SLOT_ROUTE } from './routes';
 
 const CATALOG_CACHE_S = 600;
 /** Demo bookings live this long; the hourly cleanup deletes them with their Decision and Task entities. */
@@ -30,32 +31,7 @@ const RETRY_AFTER_MS = 2 * 60_000;
 const RETRY_UNTIL_MS = 2 * 3600_000;
 const MAX_RETRIES = 20;
 
-/** Step 1: can the booking be planned? Rules only (profile in the private deployment config). */
-export const INTAKE_ROUTE: Route = {
-  type: REQUEST_TYPE,
-  profile: 'bulky-waste-intake',
-  inputs: INTAKE_INPUTS,
-  attribute: 'intake',
-  decisionEntity: true,
-  // A person arranges carrying out of the home; any app that lists Task entities shows the work.
-  task: { actions: ['review'], priority: { review: 3 } },
-};
-
-/**
- * Step 2: which day? Builds on the intake (a chained route: runs from the
- * queue only). Its subscription notifies /notify?route=slot once the intake
- * is written.
- */
-export const SLOT_ROUTE: Route = {
-  type: REQUEST_TYPE,
-  profile: 'bulky-waste-slot',
-  inputs: SLOT_INPUTS,
-  attribute: 'slot',
-  name: 'slot',
-  decisionEntity: true,
-  requires: { intake: { attribute: 'intake', rerunOnReview: true } },
-  task: { actions: ['review'], priority: { review: 2 } },
-};
+export { INTAKE_ROUTE, SLOT_ROUTE };
 
 export function bridgeConfig(env: Env): BridgeConfig {
   return {

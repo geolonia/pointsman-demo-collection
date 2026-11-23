@@ -16,7 +16,8 @@ import { test as base, expect, type Page } from '@playwright/test';
 import { fromCatalogEntity, type CatalogItem } from '../src/catalog';
 import { areaOf, cityByCode, WINDOW_DAYS } from '../src/cities';
 import { collectionDays, dayCosts, SERVICE_MIN, SERVICE_TWO_PERSON_MIN, summarize, todayJst } from '../src/plan';
-import { type Costs, dayOf, INTAKE_INPUTS, type Line, parseBooking, REQUEST_TYPE, SLOT_INPUTS, tally, toRequestEntity } from '../src/requests';
+import { type Costs, dayOf, type Line, parseBooking, tally, toRequestEntity } from '../src/requests';
+import { INTAKE_ROUTE, SLOT_ROUTE } from '../src/routes';
 import { isChecked, toDecisionEntity, toProperty, type Route } from '../engine/packages/fiware/src/bridge';
 // @ts-expect-error plain JavaScript without types: the loader of scripts/load-catalog.mjs
 import { catalogEntities } from '../scripts/catalog-rows.mjs';
@@ -31,14 +32,6 @@ const APPLIANCES = 'urn:ngsi-ld:CatalogItem:28204:x-9c2e0a2e5fc8';
 /** Both cities' catalogues, as scripts/load-catalog.mjs loads them into the broker, read back as the Worker does. */
 const catalogue = (catalogEntities((path: string) => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'))) as Parameters<typeof fromCatalogEntity>[0][])
   .map(fromCatalogEntity).filter((i): i is CatalogItem => i !== null);
-
-// The Worker's two routes (src/index.ts INTAKE_ROUTE and SLOT_ROUTE, copied:
-// that module needs the Workers runtime), as the bridge writes their results.
-const INTAKE_ROUTE: Route = { type: REQUEST_TYPE, profile: 'bulky-waste-intake', inputs: INTAKE_INPUTS, attribute: 'intake', decisionEntity: true, task: { actions: ['review'], priority: { review: 3 } } };
-const SLOT_ROUTE: Route = {
-  type: REQUEST_TYPE, profile: 'bulky-waste-slot', inputs: SLOT_INPUTS, attribute: 'slot', name: 'slot', decisionEntity: true,
-  requires: { intake: { attribute: 'intake', rerunOnReview: true } }, task: { actions: ['review'], priority: { review: 2 } },
-};
 
 const uuid = (n: number) => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
 const NOW = new Date().toISOString();
@@ -112,7 +105,7 @@ async function stubServices(page: Page, outcome?: Outcome) {
   const sent: { bookings: unknown[]; days: unknown[] } = { bookings: [], days: [] };
   let booking: Record<string, unknown> | null = null;
   let chosen: string | null = null;
-  await page.route((url) => url.origin !== origin && url.hostname !== 'msearch.gsi.go.jp', (route) => route.abort());
+  await page.route((url) => url.origin !== origin, (route) => route.abort());
   // GSI's address search, from the browser: one hit in Nishinomiya.
   await page.route('https://msearch.gsi.go.jp/**', (route) => route.fulfill({
     json: [{ geometry: { coordinates: AT, type: 'Point' }, type: 'Feature', properties: { title: `兵庫県西宮市${TOWN}` } }],
@@ -226,7 +219,7 @@ test('the developer view opens and closes', async ({ page }) => {
 });
 
 test('a booking that can be planned: the page offers days, and sends the one picked', async ({ page }) => {
-  const sent = await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action: 'offer_days', rule: 1 } });
+  const sent = await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action: 'offer_days', rule: 5 } });
   await page.goto('/');
   await findPlace(page);
   await addItem(page, IRONING_BOARD);
@@ -239,9 +232,10 @@ test('a booking that can be planned: the page offers days, and sends the one pic
   await expect(flow.locator('.verdict').nth(1)).toHaveText('Pick one of these days');
   // The offered days are the Worker's own route costs for this booking.
   const offers = flow.locator('.actions').filter({ hasNotText: 'Make another booking' }).first().getByRole('button');
+  // The last of them, so a page that always sends the first offered day fails.
   await expect(offers.first()).toBeVisible();
-  const label = await offers.first().textContent();
-  await offers.first().click();
+  const label = await offers.last().textContent();
+  await offers.last().click();
   // The click returns before the stub has recorded the request: wait for it.
   await expect.poll(() => sent.days.length).toBe(1);
   await expect(flow.locator('.chosen')).toHaveText(`Collection on ${label}`);
@@ -264,8 +258,18 @@ test('items the city does not collect: the page lists them with the city\'s advi
 });
 
 // The tests' safety rests on the --var settings in playwright.config.ts
-// winning over a local .dev.vars: then the Worker's broker is a closed port.
+// winning over a local .dev.vars: then the Worker's broker and geocoder are a
+// closed port. A network failure gives "something went wrong"; a real service
+// that answered (even with an error) would give the data platform's or the
+// address service's own message, or a result.
 test('the Worker cannot reach a real broker: an unstubbed call fails at once', async ({ request }) => {
   const res = await request.get('/api/catalog?city=28204');
   expect(res.status()).toBe(502);
+  expect(await res.json()).toEqual({ error: 'something went wrong' });
+});
+
+test('the Worker cannot reach GSI\'s geocoder: an unstubbed call fails at once', async ({ request }) => {
+  const res = await request.get('/api/place?lon=135.37311&lat=34.74305');
+  expect(res.status()).toBe(502);
+  expect(await res.json()).toEqual({ error: 'something went wrong' });
 });
