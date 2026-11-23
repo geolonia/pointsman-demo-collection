@@ -127,6 +127,10 @@ async function stubServices(page: Page, outcome?: Outcome) {
     const city = cityByCode(NISHINOMIYA)!;
     const area = areaOf(city, TOWN);
     const days = collectionDays(area, todayJst(new Date(Date.now() + city.leadDays * 86_400_000)), WINDOW_DAYS);
+    // As createRequest does: a wished day outside the collection days of the window is refused.
+    if (parsed.wishedDay && (parsed.wishedDay < days[0]! || parsed.wishedDay > days[days.length - 1]!)) {
+      return route.fulfill({ status: 400, json: { error: `the wished day must be from ${days[0]} to ${days[days.length - 1]}` } });
+    }
     const lines: Line[] = parsed.items.map((l) => ({ item: catalogue.find((i) => i.id === l.id)!, qty: l.qty }));
     const perDay = dayCosts(area, area.key, days, { at: parsed.location, serviceMin: tally(lines).twoPerson ? SERVICE_TWO_PERSON_MIN : SERVICE_MIN }, new Map());
     const costs: Costs = { ...summarize(perDay, parsed.wishedDay), days: perDay, planner: 'mock' };
@@ -178,14 +182,17 @@ async function addItem(page: Page, id: string) {
   await expect(page.locator('ul.lines')).toContainText(item.name.en);
 }
 
-/** Steps 2 to 4 after the items: on with the day as it is, and send. */
+/** Steps 2 to 4 after the items: on with the day as it is, and send. Returns the day selected in step 3. */
 async function sendBooking(page: Page) {
   await page.getByRole('button', { name: 'Next' }).click();
   await expect(page.locator('#flow-title')).toHaveText('Which day?');
+  const wishedDay = await page.locator('#day').inputValue();
+  expect(wishedDay).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   await page.getByRole('button', { name: 'Next' }).click();
   await expect(page.locator('#flow-title')).toHaveText('Check and send');
   await page.getByRole('button', { name: 'Send' }).click();
   await expect(page.locator('#flow-title')).toHaveText('Your booking');
+  return wishedDay;
 }
 
 test('the page loads at the first step, without the map', async ({ page }) => {
@@ -223,10 +230,10 @@ test('a booking that can be planned: the page offers days, and sends the one pic
   await page.goto('/');
   await findPlace(page);
   await addItem(page, IRONING_BOARD);
-  await sendBooking(page);
-  // What the page sent: the place, the item, and the day as chosen in step 3 (the first day, "preferred").
+  const wishedDay = await sendBooking(page);
+  // What the page sent: the place, the item, and the day as selected in step 3 ("preferred").
   expect(sent.bookings).toHaveLength(1);
-  expect(sent.bookings[0]).toMatchObject({ location: AT, items: [{ id: IRONING_BOARD, qty: 1 }], dateNeed: 'preferred', carryOut: false, lang: 'en' });
+  expect(sent.bookings[0]).toMatchObject({ location: AT, items: [{ id: IRONING_BOARD, qty: 1 }], dateNeed: 'preferred', wishedDay, carryOut: false, lang: 'en' });
   const flow = page.locator('#flow-body');
   await expect(flow.locator('.verdict').first()).toHaveText('Can be planned');
   await expect(flow.locator('.verdict').nth(1)).toHaveText('Pick one of these days');
