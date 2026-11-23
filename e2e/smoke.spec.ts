@@ -167,6 +167,9 @@ async function stubServices(page: Page, outcome?: Outcome) {
 
 /** Step 1: finds the place with the address search, and goes on. */
 async function findPlace(page: Page) {
+  // The page draws this step at once and again when /api/config arrives, which
+  // would clear what was typed: wait for the second draw (the map line is set with it).
+  await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
   await page.getByRole('searchbox', { name: 'Search for a place' }).fill(`西宮市${TOWN}`);
   await page.getByRole('button', { name: 'Search', exact: true }).click();
   await expect(page.locator('#flow-body dl')).toContainText(TOWN);
