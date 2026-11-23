@@ -161,13 +161,14 @@ footer { padding: 16px 24px 32px; color: var(--muted); font-size: 13px; max-widt
 .cats { display: flex; flex-wrap: wrap; gap: 6px; }
 .catalog, .lines { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 4px; }
 .catalog { max-height: 320px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; padding: 4px; }
-.catalog li, .lines li { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 6px 8px; border-radius: 6px; background: var(--panel-2); }
-.lines li { grid-template-columns: 1fr 64px auto auto; }
+.catalog li, .lines li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 8px; align-items: center; padding: 6px 8px; border-radius: 6px; background: var(--panel-2); }
+.lines li { grid-template-columns: minmax(0, 1fr) 64px auto auto; }
+.catalog .name, .lines .name { overflow-wrap: anywhere; }
 .lines input[type="number"] { width: 64px; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); font: inherit; }
 .catalog .meta, .lines .meta { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 .catalog small { color: var(--muted); }
 .not-collected .name { text-decoration: line-through; text-decoration-color: var(--red); }
-.not-collected .meta { color: var(--red); }
+.not-collected .meta { color: var(--red); white-space: normal; max-width: 9em; }
 .field select { width: 100%; }
 .verdict.v-plan, .verdict.v-accept, .verdict.v-assign_best { border-color: var(--green); color: var(--green); }
 .verdict.v-offer_days, .verdict.v-ask, .verdict.v-hold { border-color: var(--amber); color: var(--amber); }
