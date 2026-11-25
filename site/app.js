@@ -104,7 +104,7 @@
   var map = null;
   var marker = null;
   /** The booking being made, and what came back. */
-  var flow = { step: 1, place: null, catalog: null, catalogFor: null, filter: '', category: '', lines: [], dateNeed: 'preferred', wishedDay: '', carryOut: false, id: null, result: null, sending: false, error: '', polls: 0 };
+  var flow = { step: 1, query: '', searchStatus: '', place: null, catalog: null, catalogFor: null, filter: '', category: '', lines: [], dateNeed: 'preferred', wishedDay: '', carryOut: false, id: null, result: null, sending: false, error: '', polls: 0 };
 
   function t(key, vars) {
     var s = (T[lang] && T[lang][key]) || T.en[key] || key;
@@ -196,18 +196,27 @@
     });
   }
 
-  function search(q) {
+  /**
+   * The search's status line (a text key, or ''), kept in the flow so a
+   * redraw before GSI answers neither loses it nor shows it in the old language.
+   */
+  function searchStatus(key) {
+    flow.searchStatus = key;
     var status = document.getElementById('search-status');
-    status.textContent = t('searching');
+    if (status) status.textContent = key ? t(key) : '';
+  }
+
+  function search(q) {
+    searchStatus('searching');
     // GSI's address search, from the browser: the words go to GSI, nowhere else.
     fetch('https://msearch.gsi.go.jp/address-search/AddressSearch?q=' + encodeURIComponent(q)).then(function (r) { return r.json(); }).then(function (hits) {
       var hit = (hits || []).filter(function (h) { var a = h.geometry && h.geometry.coordinates; return a && a[0] > 135.1 && a[0] < 135.5 && a[1] > 34.6 && a[1] < 34.95; })[0];
-      if (!hit) { status.textContent = t('noHit'); return; }
-      status.textContent = '';
+      if (!hit) { searchStatus('noHit'); return; }
+      searchStatus('');
       var at = hit.geometry.coordinates;
       if (map) map.flyTo({ center: at, zoom: 15 });
       pickPlace([at[0], at[1]]);
-    }).catch(function () { status.textContent = t('placeFailed'); });
+    }).catch(function () { searchStatus('placeFailed'); });
   }
 
   // --- the catalogue -----------------------------------------------------------
@@ -242,11 +251,20 @@
     if (flow.step === 1 && map) setTimeout(function () { map.resize(); }, 0);
     var before = document.getElementById('flow-before');
     var body = document.getElementById('flow-body');
+    // The step is drawn anew (for example when /api/config arrives): keep the
+    // focus and the cursor in the search box for someone who is typing.
+    var typing = document.activeElement && document.activeElement.id === 'q' ? document.activeElement : null;
+    var caret = typing ? [typing.selectionStart, typing.selectionEnd] : null;
     before.replaceChildren();
     var parts = [stepPlace, stepItems, stepDay, stepCheck, stepResult][flow.step - 1]();
     if (flow.step === 1) { before.append.apply(before, parts[0]); body.replaceChildren.apply(body, parts[1]); }
     else body.replaceChildren.apply(body, parts);
     if (flow.error) body.append(el('p', { class: 'field-error', role: 'alert' }, [flow.error]));
+    var q = typing && document.getElementById('q');
+    if (q) {
+      q.focus({ preventScroll: true });
+      try { q.setSelectionRange(caret[0], caret[1]); } catch (e) { /* an input type without a cursor */ }
+    }
   }
 
   function actions(back, nextLabel, nextFn, nextOk) {
@@ -257,9 +275,9 @@
   }
 
   function stepPlace() {
-    var input = el('input', { type: 'search', id: 'q', autocomplete: 'off', 'aria-label': t('search'), placeholder: t('search') });
+    var input = el('input', { type: 'search', id: 'q', value: flow.query, autocomplete: 'off', 'aria-label': t('search'), placeholder: t('search'), oninput: function (e) { flow.query = e.target.value; } });
     var form = el('form', { class: 'search', onsubmit: function (e) { e.preventDefault(); if (input.value.trim()) search(input.value.trim()); } }, [input, el('button', { type: 'submit', class: 'btn ghost' }, [t('searchBtn')])]);
-    var top = [el('p', { class: 'muted' }, [t('placeHint')]), form, el('p', { class: 'status', id: 'search-status', role: 'status' })];
+    var top = [el('p', { class: 'muted' }, [t('placeHint')]), form, el('p', { class: 'status', id: 'search-status', role: 'status' }, [flow.searchStatus ? t(flow.searchStatus) : ''])];
     var c = city(), a = area();
     var info = [];
     if (flow.place && flow.place.loading) info.push(el('p', { class: 'muted' }, ['…']));
