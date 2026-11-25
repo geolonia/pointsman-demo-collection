@@ -164,8 +164,9 @@ async function stubServices(page: Page, outcome?: Outcome) {
 
 /** Step 1: finds the place with the address search, and goes on. */
 async function findPlace(page: Page) {
-  // The page draws this step at once and again when /api/config arrives, which
-  // would clear what was typed: wait for the second draw (the map line is set with it).
+  // The page draws this step at once and again when /api/config arrives: wait
+  // for the second draw (the map line is set with it), so every test starts
+  // from the same page. Typing before it is tested on its own (#13).
   await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
   await page.getByRole('searchbox', { name: 'Search for a place' }).fill(`西宮市${TOWN}`);
   await page.getByRole('button', { name: 'Search', exact: true }).click();
@@ -203,6 +204,23 @@ test('the page loads at the first step, without the map', async ({ page }) => {
   await expect(page.locator('#flow-title')).toHaveText('Where are the items put out?');
   await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
   await expect(page.getByRole('searchbox', { name: 'Search for a place' })).toBeVisible();
+});
+
+test('an address typed before /api/config answers stays in the search box, with the focus (#13)', async ({ page }) => {
+  await stubServices(page);
+  let release!: () => void;
+  const held = new Promise<void>((resolve) => { release = resolve; });
+  await page.route('**/api/config', async (route) => { await held; await route.continue(); });
+  await page.goto('/');
+  const box = page.getByRole('searchbox', { name: 'Search for a place' });
+  await box.fill(`西宮市${TOWN}`);
+  release();
+  // The second draw: the map line is set with it.
+  await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
+  await expect(box).toHaveValue(`西宮市${TOWN}`);
+  await expect(box).toBeFocused();
+  await page.getByRole('button', { name: 'Search', exact: true }).click();
+  await expect(page.locator('#flow-body dl')).toContainText(TOWN);
 });
 
 test('the language switch shows the page in Japanese', async ({ page }) => {

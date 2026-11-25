@@ -104,7 +104,7 @@
   var map = null;
   var marker = null;
   /** The booking being made, and what came back. */
-  var flow = { step: 1, place: null, catalog: null, catalogFor: null, filter: '', category: '', lines: [], dateNeed: 'preferred', wishedDay: '', carryOut: false, id: null, result: null, sending: false, error: '', polls: 0 };
+  var flow = { step: 1, query: '', place: null, catalog: null, catalogFor: null, filter: '', category: '', lines: [], dateNeed: 'preferred', wishedDay: '', carryOut: false, id: null, result: null, sending: false, error: '', polls: 0 };
 
   function t(key, vars) {
     var s = (T[lang] && T[lang][key]) || T.en[key] || key;
@@ -242,11 +242,17 @@
     if (flow.step === 1 && map) setTimeout(function () { map.resize(); }, 0);
     var before = document.getElementById('flow-before');
     var body = document.getElementById('flow-body');
+    // The step is drawn anew (for example when /api/config arrives): keep the
+    // focus and the cursor in the search box for someone who is typing.
+    var typing = document.activeElement && document.activeElement.id === 'q' ? document.activeElement : null;
+    var caret = typing ? [typing.selectionStart, typing.selectionEnd] : null;
     before.replaceChildren();
     var parts = [stepPlace, stepItems, stepDay, stepCheck, stepResult][flow.step - 1]();
     if (flow.step === 1) { before.append.apply(before, parts[0]); body.replaceChildren.apply(body, parts[1]); }
     else body.replaceChildren.apply(body, parts);
     if (flow.error) body.append(el('p', { class: 'field-error', role: 'alert' }, [flow.error]));
+    var q = typing && document.getElementById('q');
+    if (q) { q.focus(); q.setSelectionRange(caret[0], caret[1]); }
   }
 
   function actions(back, nextLabel, nextFn, nextOk) {
@@ -257,7 +263,7 @@
   }
 
   function stepPlace() {
-    var input = el('input', { type: 'search', id: 'q', autocomplete: 'off', 'aria-label': t('search'), placeholder: t('search') });
+    var input = el('input', { type: 'search', id: 'q', value: flow.query, autocomplete: 'off', 'aria-label': t('search'), placeholder: t('search'), oninput: function (e) { flow.query = e.target.value; } });
     var form = el('form', { class: 'search', onsubmit: function (e) { e.preventDefault(); if (input.value.trim()) search(input.value.trim()); } }, [input, el('button', { type: 'submit', class: 'btn ghost' }, [t('searchBtn')])]);
     var top = [el('p', { class: 'muted' }, [t('placeHint')]), form, el('p', { class: 'status', id: 'search-status', role: 'status' })];
     var c = city(), a = area();
