@@ -206,21 +206,51 @@ test('the page loads at the first step, without the map', async ({ page }) => {
   await expect(page.getByRole('searchbox', { name: 'Search for a place' })).toBeVisible();
 });
 
-test('an address typed before /api/config answers stays in the search box, with the focus (#13)', async ({ page }) => {
+test('an address typed before /api/config answers stays in the search box, with the focus and the cursor (#13)', async ({ page }) => {
   await stubServices(page);
   let release!: () => void;
   const held = new Promise<void>((resolve) => { release = resolve; });
   await page.route('**/api/config', async (route) => { await held; await route.continue(); });
-  await page.goto('/');
-  const box = page.getByRole('searchbox', { name: 'Search for a place' });
-  await box.fill(`西宮市${TOWN}`);
-  release();
-  // The second draw: the map line is set with it.
-  await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
-  await expect(box).toHaveValue(`西宮市${TOWN}`);
-  await expect(box).toBeFocused();
-  await page.getByRole('button', { name: 'Search', exact: true }).click();
-  await expect(page.locator('#flow-body dl')).toContainText(TOWN);
+  try {
+    await page.goto('/');
+    const box = page.getByRole('searchbox', { name: 'Search for a place' });
+    await box.fill(`西宮市${TOWN}`);
+    await box.evaluate((input: HTMLInputElement) => input.setSelectionRange(3, 3));
+    release();
+    // The second draw: the map line is set with it.
+    await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
+    await expect(box).toHaveValue(`西宮市${TOWN}`);
+    await expect(box).toBeFocused();
+    expect(await box.evaluate((input: HTMLInputElement) => [input.selectionStart, input.selectionEnd])).toEqual([3, 3]);
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    await expect(page.locator('#flow-body dl')).toContainText(TOWN);
+  } finally {
+    release();
+  }
+});
+
+test('a redraw keeps the typed text and the search status, in the new language, and does not take the focus (#13)', async ({ page }) => {
+  await stubServices(page);
+  let answer!: () => void;
+  const answered = new Promise<void>((resolve) => { answer = resolve; });
+  // Nothing found, but only once the test lets GSI answer.
+  await page.route('https://msearch.gsi.go.jp/**', async (route) => { await answered; await route.fulfill({ json: [], headers: { 'access-control-allow-origin': '*' } }); });
+  try {
+    await page.goto('/');
+    await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
+    await page.getByRole('searchbox', { name: 'Search for a place' }).fill('どこか');
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    await expect(page.locator('#search-status')).toHaveText('Searching…');
+    // The language switch draws the step anew while GSI has not answered.
+    await page.locator('#lang').click();
+    const box = page.getByRole('searchbox', { name: '場所を検索' });
+    await expect(box).toHaveValue('どこか');
+    await expect(box).not.toBeFocused();
+    answer();
+    await expect(page.locator('#search-status')).toHaveText('西宮市・芦屋市で見つかりませんでした。');
+  } finally {
+    answer();
+  }
 });
 
 test('the language switch shows the page in Japanese', async ({ page }) => {
