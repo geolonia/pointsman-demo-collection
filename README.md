@@ -157,6 +157,26 @@ Once, before the first deploy:
   `BROKER_API_KEY=… node scripts/load-catalog.mjs --apply` writes it (again
   after the data changes; upsert never deletes).
 
+## Deployment
+
+Cloudflare Workers Builds watches this repository and deploys `main`; no
+credential lives in GitHub, and CI only runs a dry-run deploy. Each deploy
+shows as the check "Workers Builds: pointsman-demo-collection" on the commit.
+Settings of the `pointsman-demo-collection` Worker (Settings → Build):
+
+| Setting | Value |
+|---|---|
+| Git repository | `geolonia/pointsman-demo-collection`, production branch `main` |
+| Build command | `node scripts/fetch-engine.mjs && pnpm install --frozen-lockfile` |
+| Deploy command | `pnpm exec wrangler deploy` |
+| API token | `pointsman-site build token`, shared by the Pointsman website and the three demos |
+| Build variables | None |
+| Preview builds | Off: previews would run pull request code against the real broker |
+
+Secrets are not part of the build; they stay on the Worker (`wrangler secret put`).
+If a merged change does not show on the site, look for that check first: a
+commit without it was not deployed.
+
 ## Development
 
 Node 24 and pnpm.
