@@ -18,7 +18,7 @@
 import { readFileSync } from 'node:fs';
 import { test as base, expect, type Page } from '@playwright/test';
 import { fromCatalogEntity, type CatalogItem } from '../src/catalog';
-import { areaOf, cityByCode, WINDOW_DAYS } from '../src/cities';
+import { areaOf, CITIES, cityByCode, WINDOW_DAYS } from '../src/cities';
 import { collectionDays, dayCosts, SERVICE_MIN, SERVICE_TWO_PERSON_MIN, summarize, todayJst } from '../src/plan';
 import { type Costs, dayOf, type Line, parseBooking, tally, toRequestEntity } from '../src/requests';
 import { INTAKE_ROUTE, SLOT_ROUTE } from '../src/routes';
@@ -528,6 +528,10 @@ test('failed polls: the page keeps asking, and shows the result once the Worker 
 // A transparent 1×1 PNG: every map tile.
 const BLANK_PNG = readFileSync(new URL('./fixtures/blank-tile.png', import.meta.url));
 
+// The MapLibre version the tests serve: the pinned devDependency. The page's
+// unpkg links must name the same version (a test below checks it), so update both together.
+const MAPLIBRE = (JSON.parse(readFileSync(new URL('../node_modules/maplibre-gl/package.json', import.meta.url), 'utf8')) as { version: string }).version;
+
 /**
  * The map without the network: MapLibre from the pinned devDependency (the
  * same files as the page's unpkg links, so their integrity hashes match) and
@@ -536,14 +540,22 @@ const BLANK_PNG = readFileSync(new URL('./fixtures/blank-tile.png', import.meta.
  */
 async function serveMap(page: Page) {
   const dist = new URL('../node_modules/maplibre-gl/dist/', import.meta.url);
-  await page.route('https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js', (route) => route.fulfill({
+  await page.route(`https://unpkg.com/maplibre-gl@${MAPLIBRE}/dist/maplibre-gl.js`, (route) => route.fulfill({
     body: readFileSync(new URL('maplibre-gl.js', dist)), contentType: 'application/javascript', headers: { 'access-control-allow-origin': '*' },
   }));
-  await page.route('https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css', (route) => route.fulfill({
+  await page.route(`https://unpkg.com/maplibre-gl@${MAPLIBRE}/dist/maplibre-gl.css`, (route) => route.fulfill({
     body: readFileSync(new URL('maplibre-gl.css', dist)), contentType: 'text/css', headers: { 'access-control-allow-origin': '*' },
   }));
   await page.route('https://cyberjapandata.gsi.go.jp/xyz/**', (route) => route.fulfill({ body: BLANK_PNG, contentType: 'image/png', headers: { 'access-control-allow-origin': '*' } }));
 }
+
+test('the page loads the MapLibre version the tests serve', async ({ request }) => {
+  const html = await (await request.get('/')).text();
+  for (const file of ['maplibre-gl.js', 'maplibre-gl.css']) {
+    expect(html, `site/index.html must load maplibre-gl@${MAPLIBRE} (the devDependency): update both together, with the integrity hash`)
+      .toContain(`https://unpkg.com/maplibre-gl@${MAPLIBRE}/dist/${file}`);
+  }
+});
 
 test('the map: it loads with the depots, and a click on it picks the place', async ({ page }) => {
   await stubServices(page);
@@ -553,7 +565,7 @@ test('the map: it loads with the depots, and a click on it picks the place', asy
   const map = page.locator('#map');
   await expect(map.locator('canvas.maplibregl-canvas')).toBeVisible();
   // One depot per area (src/cities.ts), as markers on the map.
-  await expect(map.locator('.depot')).toHaveCount(3);
+  await expect(map.locator('.depot')).toHaveCount(CITIES.reduce((n, c) => n + c.areas.length, 0));
   await expect(page.locator('#status')).not.toHaveText('The map could not be loaded.');
   // A click in the middle of the map: the point where the map starts (site/app.js makeMap).
   await map.click();
