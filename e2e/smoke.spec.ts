@@ -2,8 +2,9 @@
 // and bookings go from the address search to their result: in both cities,
 // carried out or not, with a fixed, preferred or any day; every day result
 // (accept, assign best, offer days, review, hold), items the city does not
-// collect, and a result that is slow or whose polls fail. The map is not
-// tested: its tiles and MapLibre are blocked (below). Endpoints that need the broker,
+// collect, and a result that is slow or whose polls fail. The map runs with
+// MapLibre from the pinned devDependency and blank tiles (serveMap); the other
+// tests run without it, as the page does when MapLibre does not load. Endpoints that need the broker,
 // Pointsman or GSI are stubbed here (playwright.config.ts says why); GET
 // /api/config and the page's files come from the Worker itself. The stubs do
 // what the Worker does, with its own functions: the cities and areas, the
@@ -521,6 +522,73 @@ test('failed polls: the page keeps asking, and shows the result once the Worker 
   // The three 503 answers are this test's own, and the only ones: not page errors.
   const own = (e: string) => /^503 GET .*\/api\/requests\//.test(e);
   expect(pageErrors.filter(own)).toHaveLength(3);
+  pageErrors.splice(0, pageErrors.length, ...pageErrors.filter((e) => !own(e)));
+});
+
+// A transparent 1×1 PNG: every map tile.
+const BLANK_PNG = readFileSync(new URL('./fixtures/blank-tile.png', import.meta.url));
+
+/**
+ * The map without the network: MapLibre from the pinned devDependency (the
+ * same files as the page's unpkg links, so their integrity hashes match) and
+ * a blank tile for every GSI tile. Added after stubServices, so these routes
+ * come before its "block other hosts".
+ */
+async function serveMap(page: Page) {
+  const dist = new URL('../node_modules/maplibre-gl/dist/', import.meta.url);
+  await page.route('https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js', (route) => route.fulfill({
+    body: readFileSync(new URL('maplibre-gl.js', dist)), contentType: 'application/javascript', headers: { 'access-control-allow-origin': '*' },
+  }));
+  await page.route('https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css', (route) => route.fulfill({
+    body: readFileSync(new URL('maplibre-gl.css', dist)), contentType: 'text/css', headers: { 'access-control-allow-origin': '*' },
+  }));
+  await page.route('https://cyberjapandata.gsi.go.jp/xyz/**', (route) => route.fulfill({ body: BLANK_PNG, contentType: 'image/png', headers: { 'access-control-allow-origin': '*' } }));
+}
+
+test('the map: it loads with the depots, and a click on it picks the place', async ({ page }) => {
+  await stubServices(page);
+  await serveMap(page);
+  const placeAsked = page.waitForRequest((r) => r.url().includes('/api/place?'));
+  await page.goto('/');
+  const map = page.locator('#map');
+  await expect(map.locator('canvas.maplibregl-canvas')).toBeVisible();
+  // One depot per area (src/cities.ts), as markers on the map.
+  await expect(map.locator('.depot')).toHaveCount(3);
+  await expect(page.locator('#status')).not.toHaveText('The map could not be loaded.');
+  // A click in the middle of the map: the point where the map starts (site/app.js makeMap).
+  await map.click();
+  const asked = new URL((await placeAsked).url());
+  expect(Number(asked.searchParams.get('lon'))).toBeCloseTo(135.33, 2);
+  expect(Number(asked.searchParams.get('lat'))).toBeCloseTo(34.75, 2);
+  // The picked place: a marker on the map, and the stub's town in the step.
+  await expect(map.locator('.maplibregl-marker:not(.depot)')).toHaveCount(1);
+  await expect(page.locator('#flow-body dl')).toContainText(TOWN);
+});
+
+test('the map: a click outside both cities is refused, and the map shows only in step 1', async ({ page, pageErrors }) => {
+  await stubServices(page);
+  await serveMap(page);
+  // The geocoder finds no city at the first place (the Worker answers 404); then stubServices answers.
+  let outside = true;
+  await page.route('**/api/place?*', (route) => (outside ? route.fulfill({ status: 404, json: { error: 'outside the cities' } }) : route.fallback()));
+  await page.goto('/');
+  const map = page.locator('#map');
+  await expect(map.locator('canvas.maplibregl-canvas')).toBeVisible();
+  await map.click();
+  await expect(page.locator('#flow-body')).toContainText('This place is not in Nishinomiya or Ashiya. Pick a place in one of the two cities.');
+  await expect(page.getByRole('button', { name: 'Next' })).toBeDisabled();
+  // A place that is found (the address search, with the map loaded): on to step 2, where the map is hidden.
+  outside = false;
+  await page.getByRole('searchbox', { name: 'Search for a place' }).fill(`西宮市${TOWN}`);
+  await page.getByRole('button', { name: 'Search', exact: true }).click();
+  await expect(page.locator('#flow-body dl')).toContainText(TOWN);
+  await expect(page.locator('#map-wrap')).toBeVisible();
+  await page.getByRole('button', { name: 'Next' }).click();
+  await expect(page.locator('#flow-title')).toHaveText('What is to be collected?');
+  await expect(page.locator('#map-wrap')).toBeHidden();
+  // The 404 is this test's own answer, and the only one: not a page error.
+  const own = (e: string) => /^404 GET .*\/api\/place\?/.test(e);
+  expect(pageErrors.filter(own)).toHaveLength(1);
   pageErrors.splice(0, pageErrors.length, ...pageErrors.filter((e) => !own(e)));
 });
 
