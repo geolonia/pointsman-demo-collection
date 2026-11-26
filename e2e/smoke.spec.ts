@@ -331,7 +331,7 @@ test('items the city does not collect: the page lists them with the city\'s advi
   await expect(page.locator('ul.lines')).toContainText('Home Appliance Recycling Law items');
 });
 
-/** Step 3: how much the day matters, and (unless any day is fine) the wished day, by its value. */
+/** Step 3: how much the day matters, and (unless any day is fine) the wished day, by its value. Returns the day and its label. */
 async function chooseDay(page: Page, need: 'fixed' | 'preferred' | 'any', day?: (days: string[]) => string) {
   await page.getByRole('button', { name: 'Next' }).click();
   await expect(page.locator('#flow-title')).toHaveText('Which day?');
@@ -344,20 +344,27 @@ async function chooseDay(page: Page, need: 'fixed' | 'preferred' | 'any', day?: 
   const days = await page.locator('#day option').evaluateAll((options) => options.map((o) => (o as HTMLOptionElement).value));
   const wished = day ? day(days) : days[0]!;
   await page.locator('#day').selectOption(wished);
-  return wished;
+  return { day: wished, label: (await page.locator(`#day option[value="${wished}"]`).textContent())! };
 }
 
 /**
- * Moves the page's clock one poll at a time until the stub has had `count`
- * polls: each poll sets its next timer only once its answer is in, so one
- * long runFor() would pass the timers that come later.
+ * Moves the page's clock in 1 s steps until the stub has had `count` polls.
+ * Each poll sets its next timer only once its answer is in, so one long
+ * runFor() would pass the timers that come later; short steps with a moment
+ * in between let every answer arrive, however slow the machine.
  */
 async function pollUntil(page: Page, sent: { polls: number }, count: number) {
-  while (sent.polls < count) {
-    const before = sent.polls;
-    await page.clock.runFor(4_000);
-    await expect.poll(() => sent.polls).toBeGreaterThan(before);
+  for (let step = 0; sent.polls < count; step++) {
+    expect(step, 'steps of 1 s').toBeLessThan(1_000);
+    await page.clock.runFor(1_000);
+    await page.waitForTimeout(20);
   }
+}
+
+/** The page's clock moves `ms` on; then a moment for a poll it started to reach the stub. */
+async function idle(page: Page, ms: number) {
+  await page.clock.runFor(ms);
+  await page.waitForTimeout(500);
 }
 
 /** Step 4: sends the booking, and waits for the result step. */
@@ -405,13 +412,13 @@ test('a fixed day, accepted: the page sends that day and shows it as the collect
   await findPlace(page);
   await addItem(page, IRONING_BOARD);
   // The last day offered, so a page that always sends the first one fails.
-  const wished = await chooseDay(page, 'fixed', (days) => days[days.length - 1]!);
+  const wished = (await chooseDay(page, 'fixed', (days) => days[days.length - 1]!))!;
   await send(page);
-  expect(sent.bookings[0]).toMatchObject({ dateNeed: 'fixed', wishedDay: wished });
+  expect(sent.bookings[0]).toMatchObject({ dateNeed: 'fixed', wishedDay: wished.day });
   const flow = page.locator('#flow-body');
   await expect(flow.locator('.verdict').nth(1)).toHaveText('Your wished day');
   await expect(flow).toContainText('you need that day');
-  await expect(flow.locator('.chosen')).toContainText('Collection on');
+  await expect(flow.locator('.chosen')).toHaveText(`Collection on ${wished.label}`);
   // The cost table marks the chosen day.
   await flow.locator('details.costs summary').click();
   await expect(flow.locator('details.costs li').filter({ hasText: '✓' })).toHaveCount(1);
@@ -461,13 +468,19 @@ test('a slow result: the page says it takes longer, stops asking after a while, 
   await sendBooking(page);
   const flow = page.locator('#flow-body');
   await expect(flow).toContainText('Pointsman is checking the booking…');
-  // After 15 polls without a decision, the page says it takes longer.
+  // From the 16th poll without a decision (polls > 15), the page says it takes longer.
+  await pollUntil(page, sent, 15);
+  await expect(flow).toContainText('Pointsman is checking the booking…');
+  await expect(flow).not.toContainText('This takes longer than usual.');
   await pollUntil(page, sent, 16);
   await expect(flow).toContainText('This takes longer than usual.');
+  // At the 40th it stops (MAX_POLLS), and not before.
+  await pollUntil(page, sent, 39);
+  await expect(flow).not.toContainText('No result yet.');
   await pollUntil(page, sent, 40);
   await expect(flow).toContainText('No result yet.');
   // No more polls once it stopped.
-  await page.clock.runFor(60_000);
+  await idle(page, 60_000);
   expect(sent.polls).toBe(40);
   await flow.getByRole('button', { name: 'Look again' }).click();
   await expect(flow.locator('.verdict').nth(1)).toHaveText('Your wished day');
@@ -484,8 +497,10 @@ test('failed polls: the page keeps asking, and shows the result once the Worker 
   await expect(flow).toContainText('Pointsman is checking the booking…');
   await pollUntil(page, sent, 4);
   await expect(flow.locator('.verdict').nth(1)).toHaveText('The day that fits the route best');
-  // The three 503 answers are this test's own: not page errors.
-  pageErrors.splice(0, pageErrors.length, ...pageErrors.filter((e) => !/^503 GET .*\/api\/requests\//.test(e)));
+  // The three 503 answers are this test's own, and the only ones: not page errors.
+  const own = (e: string) => /^503 GET .*\/api\/requests\//.test(e);
+  expect(pageErrors.filter(own)).toHaveLength(3);
+  pageErrors.splice(0, pageErrors.length, ...pageErrors.filter((e) => !own(e)));
 });
 
 // The tests' safety rests on the --var settings in playwright.config.ts
