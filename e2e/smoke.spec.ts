@@ -359,6 +359,8 @@ async function pollUntil(page: Page, sent: { polls: number }, count: number) {
     await page.clock.runFor(1_000);
     await page.waitForTimeout(20);
   }
+  // A moment for the last answer to be drawn; with the clock paused, no later poll comes meanwhile.
+  await page.waitForTimeout(300);
 }
 
 /** The page's clock moves `ms` on; then a moment for a poll it started to reach the stub. */
@@ -466,6 +468,9 @@ test('a slow result: the page says it takes longer, stops asking after a while, 
   await findPlace(page);
   await addItem(page, IRONING_BOARD);
   await sendBooking(page);
+  // From here the page's time moves only when the test moves it, so each check reads
+  // the page after exactly that many answers, with no later poll in between.
+  await page.clock.pauseAt(await page.evaluate(() => Date.now() + 100));
   const flow = page.locator('#flow-body');
   await expect(flow).toContainText('Pointsman is checking the booking…');
   // From the 16th poll without a decision (polls > 15), the page says it takes longer.
