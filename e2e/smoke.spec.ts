@@ -363,6 +363,22 @@ async function pollUntil(page: Page, sent: { polls: number }, count: number) {
   await page.waitForTimeout(300);
 }
 
+/**
+ * Pauses the page's clock a moment from now. If that moment has passed by
+ * the time Playwright pauses (a slow machine), it throws "Cannot fast-forward
+ * to the past": then read the page's time again and retry. Other errors stay.
+ */
+async function pauseClock(page: Page) {
+  for (let tries = 1; ; tries++) {
+    try {
+      await page.clock.pauseAt(await page.evaluate(() => Date.now() + 100));
+      return;
+    } catch (e) {
+      if (tries >= 5 || !String(e).includes('Cannot fast-forward to the past')) throw e;
+    }
+  }
+}
+
 /** The page's clock moves `ms` on; then a moment for a poll it started to reach the stub. */
 async function idle(page: Page, ms: number) {
   await page.clock.runFor(ms);
@@ -470,7 +486,7 @@ test('a slow result: the page says it takes longer, stops asking after a while, 
   await sendBooking(page);
   // From here the page's time moves only when the test moves it, so each check reads
   // the page after exactly that many answers, with no later poll in between.
-  await page.clock.pauseAt(await page.evaluate(() => Date.now() + 100));
+  await pauseClock(page);
   const flow = page.locator('#flow-body');
   await expect(flow).toContainText('Pointsman is checking the booking…');
   // From the 16th poll without a decision (polls > 15), the page says it takes longer.
