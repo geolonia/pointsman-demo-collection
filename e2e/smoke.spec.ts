@@ -1,6 +1,9 @@
 // Smoke tests: the page loads on the real Worker, its main controls work,
-// and bookings go from the address search to their result: a day offered and
-// chosen, and items the city does not collect. Endpoints that need the broker,
+// and bookings go from the address search to their result: in both cities,
+// carried out or not, with a fixed, preferred or any day; every day result
+// (accept, assign best, offer days, review, hold), items the city does not
+// collect, and a result that is slow or whose polls fail. The map is not
+// tested: its tiles and MapLibre are blocked (below). Endpoints that need the broker,
 // Pointsman or GSI are stubbed here (playwright.config.ts says why); GET
 // /api/config and the page's files come from the Worker itself. The stubs do
 // what the Worker does, with its own functions: the cities and areas, the
@@ -28,6 +31,14 @@ const TOWN = '甲子園口北町';
 const AT: [number, number] = [135.37311, 34.74305];
 const IRONING_BOARD = 'urn:ngsi-ld:CatalogItem:28204:i-b1fa7eff4cca';
 const APPLIANCES = 'urn:ngsi-ld:CatalogItem:28204:x-9c2e0a2e5fc8';
+// Ashiya: the city with a carry-out service, one area, and a town and point in it.
+const ASHIYA = '28206';
+const OVEN = 'urn:ngsi-ld:CatalogItem:28206:i-4b8fdbdfba1f';
+
+/** Where the items are put out: the city, the town GSI and the geocoder name, and the point. */
+interface Place { city: string; town: string; at: [number, number] }
+const NISHINOMIYA_PLACE: Place = { city: NISHINOMIYA, town: TOWN, at: AT };
+const ASHIYA_PLACE: Place = { city: ASHIYA, town: '精道町', at: [135.30556, 34.73472] };
 
 /** Both cities' catalogues, as scripts/load-catalog.mjs loads them into the broker, read back as the Worker does. */
 const catalogue = (catalogEntities((path: string) => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'))) as Parameters<typeof fromCatalogEntity>[0][])
@@ -62,6 +73,8 @@ function written(d: Decision, route: Route, requestId: string) {
 interface Outcome {
   intake: { action: string; rule: number | null };
   slot?: { action: string; rule: number | null };
+  /** The page's polls first get `errors` failed answers (503), then `pending` answers without a decision, then the decisions. */
+  wait?: { errors?: number; pending?: number };
 }
 
 /** Uncaught errors, console errors, and failed loads or error answers from the page's own origin. */
@@ -100,21 +113,21 @@ const test = base.extend<{ pageErrors: string[] }>({
  * src/index.ts, with no other bookings yet); `outcome` is what Pointsman then
  * writes on it. Returns what the page sent.
  */
-async function stubServices(page: Page, outcome?: Outcome) {
+async function stubServices(page: Page, outcome?: Outcome, place: Place = NISHINOMIYA_PLACE) {
   const origin = new URL(test.info().project.use.baseURL!).origin;
-  const sent: { bookings: unknown[]; days: unknown[] } = { bookings: [], days: [] };
+  const sent: { bookings: unknown[]; days: unknown[]; polls: number } = { bookings: [], days: [], polls: 0 };
   let booking: Record<string, unknown> | null = null;
   let chosen: string | null = null;
   await page.route((url) => url.origin !== origin, (route) => route.abort());
-  // GSI's address search, from the browser: one hit in Nishinomiya.
+  // GSI's address search, from the browser: one hit, at the place.
   await page.route('https://msearch.gsi.go.jp/**', (route) => route.fulfill({
-    json: [{ geometry: { coordinates: AT, type: 'Point' }, type: 'Feature', properties: { title: `兵庫県西宮市${TOWN}` } }],
+    json: [{ geometry: { coordinates: place.at, type: 'Point' }, type: 'Feature', properties: { title: `兵庫県${cityByCode(place.city)!.name.ja}${place.town}` } }],
     headers: { 'access-control-allow-origin': '*' },
   }));
-  // The geocoder says Nishinomiya and the town; the area is the Worker's own choice.
+  // The geocoder says the city and the town; the area is the Worker's own choice.
   await page.route('**/api/place?*', (route) => {
-    const city = cityByCode(NISHINOMIYA)!;
-    return route.fulfill({ json: { city: city.code, area: areaOf(city, TOWN).key, town: TOWN } });
+    const city = cityByCode(place.city)!;
+    return route.fulfill({ json: { city: city.code, area: areaOf(city, place.town).key, town: place.town } });
   });
   await page.route('**/api/catalog?*', (route) => {
     const code = new URL(route.request().url()).searchParams.get('city');
@@ -124,8 +137,8 @@ async function stubServices(page: Page, outcome?: Outcome) {
     const body = route.request().postDataJSON();
     sent.bookings.push(body);
     const parsed = parseBooking(body);
-    const city = cityByCode(NISHINOMIYA)!;
-    const area = areaOf(city, TOWN);
+    const city = cityByCode(place.city)!;
+    const area = areaOf(city, place.town);
     const days = collectionDays(area, todayJst(new Date(Date.now() + city.leadDays * 86_400_000)), WINDOW_DAYS);
     // As createRequest does: a wished day outside the collection days of the window is refused.
     if (parsed.wishedDay && (parsed.wishedDay < days[0]! || parsed.wishedDay > days[days.length - 1]!)) {
@@ -134,7 +147,7 @@ async function stubServices(page: Page, outcome?: Outcome) {
     const lines: Line[] = parsed.items.map((l) => ({ item: catalogue.find((i) => i.id === l.id)!, qty: l.qty }));
     const perDay = dayCosts(area, area.key, days, { at: parsed.location, serviceMin: tally(lines).twoPerson ? SERVICE_TWO_PERSON_MIN : SERVICE_MIN }, new Map());
     const costs: Costs = { ...summarize(perDay, parsed.wishedDay), days: perDay, planner: 'mock' };
-    booking = toRequestEntity({ uuid: uuid(1), booking: parsed, city, area, town: TOWN, lines, costs });
+    booking = toRequestEntity({ uuid: uuid(1), booking: parsed, city, area, town: place.town, lines, costs });
     return route.fulfill({ status: 201, json: { id: booking.id } });
   });
   await page.route(/\/api\/requests\/[^/]+\/day$/, (route) => {
@@ -148,7 +161,13 @@ async function stubServices(page: Page, outcome?: Outcome) {
   });
   await page.route(/\/api\/requests\/[^/]+$/, (route) => {
     if (!booking || !outcome) return route.fulfill({ status: 404, json: { error: 'not found' } });
+    sent.polls += 1;
+    const errors = outcome.wait?.errors ?? 0;
+    if (sent.polls <= errors) return route.fulfill({ status: 503, json: { error: 'the data platform did not answer' } });
     const id = String(booking.id);
+    if (sent.polls <= errors + (outcome.wait?.pending ?? 0)) {
+      return route.fulfill({ json: { entity: booking, intakeDecision: null, slotDecision: null, day: null, query: `/entities/${encodeURIComponent(id)}` } });
+    }
     const intake = written(decision(2, INTAKE_ROUTE, outcome.intake.action, outcome.intake.rule), INTAKE_ROUTE, id);
     const slot = outcome.slot && written(decision(3, SLOT_ROUTE, outcome.slot.action, outcome.slot.rule), SLOT_ROUTE, id);
     const entity: Record<string, unknown> = {
@@ -163,14 +182,14 @@ async function stubServices(page: Page, outcome?: Outcome) {
 }
 
 /** Step 1: finds the place with the address search, and goes on. */
-async function findPlace(page: Page) {
+async function findPlace(page: Page, place: Place = NISHINOMIYA_PLACE) {
   // The page draws this step at once and again when /api/config arrives: wait
   // for the second draw (the map line is set with it), so every test starts
   // from the same page. Typing before it is tested on its own (#13).
   await expect(page.locator('#status')).toHaveText('The map could not be loaded.');
-  await page.getByRole('searchbox', { name: 'Search for a place' }).fill(`西宮市${TOWN}`);
+  await page.getByRole('searchbox', { name: 'Search for a place' }).fill(`${cityByCode(place.city)!.name.ja}${place.town}`);
   await page.getByRole('button', { name: 'Search', exact: true }).click();
-  await expect(page.locator('#flow-body dl')).toContainText(TOWN);
+  await expect(page.locator('#flow-body dl')).toContainText(place.town);
   await page.getByRole('button', { name: 'Next' }).click();
   await expect(page.locator('#flow-title')).toHaveText('What is to be collected?');
 }
@@ -310,6 +329,163 @@ test('items the city does not collect: the page lists them with the city\'s advi
   await flow.getByRole('button', { name: 'Change the booking' }).click();
   await expect(page.locator('#flow-title')).toHaveText('What is to be collected?');
   await expect(page.locator('ul.lines')).toContainText('Home Appliance Recycling Law items');
+});
+
+/** Step 3: how much the day matters, and (unless any day is fine) the wished day, by its value. */
+async function chooseDay(page: Page, need: 'fixed' | 'preferred' | 'any', day?: (days: string[]) => string) {
+  await page.getByRole('button', { name: 'Next' }).click();
+  await expect(page.locator('#flow-title')).toHaveText('Which day?');
+  const labels = { fixed: 'It must be that day', preferred: 'I would like that day', any: 'Any day is fine' };
+  await page.getByRole('radio', { name: new RegExp(`^${labels[need]}`) }).check();
+  if (need === 'any') {
+    await expect(page.locator('#day')).toHaveCount(0);
+    return null;
+  }
+  const days = await page.locator('#day option').evaluateAll((options) => options.map((o) => (o as HTMLOptionElement).value));
+  const wished = day ? day(days) : days[0]!;
+  await page.locator('#day').selectOption(wished);
+  return wished;
+}
+
+/**
+ * Moves the page's clock one poll at a time until the stub has had `count`
+ * polls: each poll sets its next timer only once its answer is in, so one
+ * long runFor() would pass the timers that come later.
+ */
+async function pollUntil(page: Page, sent: { polls: number }, count: number) {
+  while (sent.polls < count) {
+    const before = sent.polls;
+    await page.clock.runFor(4_000);
+    await expect.poll(() => sent.polls).toBeGreaterThan(before);
+  }
+}
+
+/** Step 4: sends the booking, and waits for the result step. */
+async function send(page: Page) {
+  await page.getByRole('button', { name: 'Next' }).click();
+  await expect(page.locator('#flow-title')).toHaveText('Check and send');
+  await page.getByRole('button', { name: 'Send' }).click();
+  await expect(page.locator('#flow-title')).toHaveText('Your booking');
+}
+
+test('Ashiya, carried out of the home: the page offers the city\'s service, sends it, and says a person arranges it', async ({ page }) => {
+  const sent = await stubServices(page, { intake: { action: 'review', rule: 0 } }, ASHIYA_PLACE);
+  await page.goto('/');
+  await findPlace(page, ASHIYA_PLACE);
+  await addItem(page, OVEN);
+  await page.getByRole('button', { name: 'Next' }).click();
+  await expect(page.locator('#flow-title')).toHaveText('Which day?');
+  await expect(page.locator('#flow-body')).toContainText('Sawayaka collection');
+  await page.getByRole('checkbox', { name: /^I cannot carry the items out myself/ }).check();
+  await page.getByRole('button', { name: 'Next' }).click();
+  await expect(page.locator('#flow-body dl')).toContainText('I cannot carry the items out myself');
+  await page.getByRole('button', { name: 'Send' }).click();
+  await expect(page.locator('#flow-title')).toHaveText('Your booking');
+  expect(sent.bookings[0]).toMatchObject({ location: ASHIYA_PLACE.at, items: [{ id: OVEN, qty: 1 }], carryOut: true });
+  const flow = page.locator('#flow-body');
+  await expect(flow.locator('.verdict')).toHaveText('A person arranges it');
+  await expect(flow).toContainText('staff would call you to arrange a time for carrying the items out');
+  // No day step for a booking a person arranges.
+  await expect(flow.getByRole('heading', { name: /day/i })).toHaveCount(0);
+});
+
+test('Nishinomiya carries nothing out: step 3 says so, and has no carry-out choice', async ({ page }) => {
+  await stubServices(page);
+  await page.goto('/');
+  await findPlace(page);
+  await addItem(page, IRONING_BOARD);
+  await page.getByRole('button', { name: 'Next' }).click();
+  await expect(page.locator('#flow-body')).toContainText('Nishinomiya does not carry bulky waste out of the home');
+  await expect(page.getByRole('checkbox')).toHaveCount(0);
+});
+
+test('a fixed day, accepted: the page sends that day and shows it as the collection day', async ({ page }) => {
+  const sent = await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action: 'accept', rule: 0 } });
+  await page.goto('/');
+  await findPlace(page);
+  await addItem(page, IRONING_BOARD);
+  // The last day offered, so a page that always sends the first one fails.
+  const wished = await chooseDay(page, 'fixed', (days) => days[days.length - 1]!);
+  await send(page);
+  expect(sent.bookings[0]).toMatchObject({ dateNeed: 'fixed', wishedDay: wished });
+  const flow = page.locator('#flow-body');
+  await expect(flow.locator('.verdict').nth(1)).toHaveText('Your wished day');
+  await expect(flow).toContainText('you need that day');
+  await expect(flow.locator('.chosen')).toContainText('Collection on');
+  // The cost table marks the chosen day.
+  await flow.locator('details.costs summary').click();
+  await expect(flow.locator('details.costs li').filter({ hasText: '✓' })).toHaveCount(1);
+  // No day to pick: the booking has its day.
+  await expect(flow.locator('.actions').filter({ hasNotText: 'Make another booking' })).toHaveCount(0);
+});
+
+test('any day: the page sends no wished day, and shows the day that fits the route best', async ({ page }) => {
+  const sent = await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action: 'assign_best', rule: 1 } });
+  await page.goto('/');
+  await findPlace(page);
+  await addItem(page, IRONING_BOARD);
+  await chooseDay(page, 'any');
+  await send(page);
+  expect(sent.bookings[0]).toMatchObject({ dateNeed: 'any', wishedDay: null });
+  const flow = page.locator('#flow-body');
+  await expect(flow.locator('.verdict').nth(1)).toHaveText('The day that fits the route best');
+  await expect(flow).toContainText('Pointsman chose the day that costs the route least');
+  await expect(flow.locator('.chosen')).toContainText('Collection on');
+});
+
+for (const [action, verdict, note] of [
+  ['review', 'A person finds a day', 'staff would call you'],
+  ['hold', 'No day yet', 'The booking needs a change first.'],
+] as const) {
+  test(`a day result "${action}": the page says so, and offers no day`, async ({ page }) => {
+    await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action, rule: null } });
+    await page.goto('/');
+    await findPlace(page);
+    await addItem(page, IRONING_BOARD);
+    await sendBooking(page);
+    const flow = page.locator('#flow-body');
+    await expect(flow.locator('.verdict').nth(1)).toHaveText(verdict);
+    await expect(flow).toContainText(note);
+    await expect(flow.locator('.chosen')).toHaveCount(0);
+    await expect(flow.locator('.actions').filter({ hasNotText: 'Make another booking' })).toHaveCount(0);
+  });
+}
+
+test('a slow result: the page says it takes longer, stops asking after a while, and looks again on request', async ({ page }) => {
+  await page.clock.install();
+  // 40 polls without a decision: the page's limit (MAX_POLLS in site/app.js).
+  const sent = await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action: 'accept', rule: 0 }, wait: { pending: 40 } });
+  await page.goto('/');
+  await findPlace(page);
+  await addItem(page, IRONING_BOARD);
+  await sendBooking(page);
+  const flow = page.locator('#flow-body');
+  await expect(flow).toContainText('Pointsman is checking the booking…');
+  // After 15 polls without a decision, the page says it takes longer.
+  await pollUntil(page, sent, 16);
+  await expect(flow).toContainText('This takes longer than usual.');
+  await pollUntil(page, sent, 40);
+  await expect(flow).toContainText('No result yet.');
+  // No more polls once it stopped.
+  await page.clock.runFor(60_000);
+  expect(sent.polls).toBe(40);
+  await flow.getByRole('button', { name: 'Look again' }).click();
+  await expect(flow.locator('.verdict').nth(1)).toHaveText('Your wished day');
+});
+
+test('failed polls: the page keeps asking, and shows the result once the Worker answers', async ({ page, pageErrors }) => {
+  await page.clock.install();
+  const sent = await stubServices(page, { intake: { action: 'plan', rule: null }, slot: { action: 'assign_best', rule: 1 }, wait: { errors: 3 } });
+  await page.goto('/');
+  await findPlace(page);
+  await addItem(page, IRONING_BOARD);
+  await sendBooking(page);
+  const flow = page.locator('#flow-body');
+  await expect(flow).toContainText('Pointsman is checking the booking…');
+  await pollUntil(page, sent, 4);
+  await expect(flow.locator('.verdict').nth(1)).toHaveText('The day that fits the route best');
+  // The three 503 answers are this test's own: not page errors.
+  pageErrors.splice(0, pageErrors.length, ...pageErrors.filter((e) => !/^503 GET .*\/api\/requests\//.test(e)));
 });
 
 // The tests' safety rests on the --var settings in playwright.config.ts
